@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./header.styles.scss";
 
 const Header = () => {
@@ -8,6 +11,25 @@ const Header = () => {
 	const getLink = (path) => {
 		return location.pathname === path ? "active-link" : "";
 	};
+
+	// Handle mobile menu.
+	const [menuOpen, setMenuOpen] = useState(false);
+	const handleMenu = () => {
+		setMenuOpen(!menuOpen);
+
+		if (window.innerWidth <= 768) {
+			const navElement = document.getElementById("nav");
+
+			if (!menuOpen) {
+				navElement.classList.add("open");
+				document.body.style.overflow = "hidden";
+			} else {
+				navElement.classList.remove("open");
+				document.body.style.overflow = "auto";
+			}
+		}
+	};
+
 	return (
 		<>
 			<header>
@@ -15,7 +37,29 @@ const Header = () => {
 					<Link to="/" id="logo">
 						<img src={Logo} alt="Turn Back The Block Logo" />
 					</Link>
-					<nav>
+					<div id="mobile-menu-container">
+						<div id="mobile-sub-menu">
+							<Link to="donate" id="mobile-donate">
+								Donate
+							</Link>
+
+							<Link to="volunteer" id="mobile-volunteer">
+								Volunteer
+							</Link>
+						</div>
+						<div id="hamburger-container" role="button" onClick={handleMenu}>
+							<FontAwesomeIcon
+								icon={menuOpen ? faXmark : faBars}
+								id="hamburger"
+								style={{
+									transform: menuOpen ? "rotate(90deg)" : "rotate(0)",
+									fontSize: menuOpen ? "30px" : "26px",
+								}}
+							/>
+							<span>{menuOpen ? "Close" : "Menu"}</span>
+						</div>
+					</div>
+					<nav id="nav">
 						<ul id="main-menu">
 							<ul id="main-menu-items">
 								<li>

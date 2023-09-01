@@ -20,16 +20,63 @@ header {
 			flex-grow: 0;
 			flex-shrink: 1;
 			transform: translateY(clamp(5px, 0.3vw, 0.3vw));
-			min-width: calc(10vw + 40px);
+			//min-width: calc(10vw + 40px);
 			z-index: 420;
+			width: clamp(110px, 10vw, 10vw);
 
 			img {
-				max-width: clamp(110px, 10vw, 10vw);
+				width: 100%;
 				display: block;
 			}
 		}
 
+		#mobile-menu-container {
+			display: none;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+			height: 120px;
+
+			#mobile-sub-menu {
+				display: flex;
+				gap: 4px;
+				#mobile-donate,
+				#mobile-volunteer {
+					font-family: "Intro", Arial, sans-serif;
+					font-size: 16px;
+					color: $white;
+					text-decoration: none;
+					padding: 4px 8px;
+				}
+				#mobile-donate {
+					background: $red;
+				}
+
+				#mobile-volunteer {
+					background: $brown;
+				}
+			}
+
+			#hamburger-container {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				cursor: pointer;
+				#hamburger {
+					color: $black;
+					font-size: 26px;
+					transition: transform 0.1s linear;
+				}
+				span {
+					color: $black;
+					font-family: "Intro", Arial, sans-serif;
+					font-size: 24px;
+				}
+			}
+		}
+
 		nav {
+			display: block;
 			transform: translateY(1vw);
 
 			#main-menu,
@@ -137,10 +184,12 @@ header {
 				width: 90%;
 				height: 100vh;
 				height: 100svh;
+				max-height: 999px;
 				background: $black;
 				top: 100%;
 				right: 0;
 				padding: 20px;
+				transition: height, right 0.2s linear;
 
 				#main-menu {
 					flex-direction: column;
@@ -177,7 +226,7 @@ header {
 		}
 
 		@include respond-to($tablet) {
-			width: clamp(431px, 100%, 100%);
+			width: clamp(320px, 100%, 100%);
 			align-items: flex-start;
 		}
 
@@ -185,11 +234,45 @@ header {
 			padding: 15px 20px 0 20px;
 
 			#logo {
-				//transform: translateY(clamp(5px, 0.3vw, 0.3vw));
-				//min-width: calc(10vw + 40px);
-
+				width: clamp(200px, 200px, 10vw);
+				padding-right: 20px;
 				img {
-					max-width: clamp(110px, 200px, 200px);
+					width: 100%;
+				}
+			}
+
+			#mobile-menu-container {
+				display: flex;
+
+				#hamburger-container {
+					#hamburger,
+					span {
+						display: inline;
+					}
+				}
+			}
+
+			nav {
+				display: none;
+
+				&.open {
+					display: block;
+				}
+			}
+		}
+
+		@include respond-to($mobile) {
+			align-items: flex-end;
+			#logo {
+				background: red;
+			}
+			#mobile-menu-container {
+				background: blue;
+				#mobile-sub-menu {
+					#mobile-donate,
+					#mobile-volunteer {
+						font-size: 12px;
+					}
 				}
 			}
 		}
