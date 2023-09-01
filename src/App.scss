@@ -1,0 +1,10 @@
+// Global Top-Level App Styles
+
+#root {
+	width: clamp(320px, 100%, 100%);
+	background: white;
+}
+
+h1 {
+	color: black;
+}

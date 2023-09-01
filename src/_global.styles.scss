@@ -1,0 +1,37 @@
+// Globals
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+//// Variables
+
+// Colors
+$red: #ec1d25;
+$brown: #7e6c2a;
+$purple: #a9accd;
+$light-gray: #f4f4f4;
+$dark-gray: #e7e7e7;
+$black: #231f20;
+$white: #ffffff;
+
+// Fonts
+$mont: "Montserrat", Arial, sans-serif;
+@font-face {
+	font-family: "Intro";
+	src: url("../../assets/Intro-Demo-Black-Inline-CAPS.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+// Breakpoints
+$tablet: 768px;
+$mobile: 431px;
+
+@mixin respond-to($breakpoint) {
+	@media (max-width: $breakpoint) {
+		@content;
+	}
+}
