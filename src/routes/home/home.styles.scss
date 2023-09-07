@@ -1,0 +1,304 @@
+// Home Page
+@import "../../_global.styles";
+
+#splash-container {
+	position: relative;
+	width: 100%;
+	height: clamp(330px, 30vw, 30vw);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: $red;
+	overflow: hidden;
+
+	#splash-background-mobile {
+		display: none;
+		position: relative;
+		height: calc(50vw + 20px);
+		width: 100%;
+
+		#first-copy-mobile,
+		#second-copy-mobile {
+			position: absolute;
+			top: 20px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			.bg-image.center {
+				position: absolute;
+				border: 4px solid $white;
+				max-height: 50vw;
+			}
+
+			#image-one-mobile,
+			#image-four-mobile {
+				width: 60vw;
+				height: 45vw;
+				top: 10%;
+				left: 0;
+			}
+
+			#image-two-mobile,
+			#image-five-mobile {
+				width: 32vw;
+				height: 32vw;
+				bottom: 0;
+				left: 40%;
+			}
+
+			#image-three-mobile,
+			#image-six-mobile {
+				width: 50vw;
+				height: 40vw;
+				top: 0;
+				left: 55%;
+			}
+		}
+
+		@include respond-to(540px) {
+			display: block;
+		}
+	}
+
+	#splash {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: clamp(768px, 70%, 70%);
+		padding: 2rem 20px 0 20px;
+		z-index: 2;
+
+		#splash-content {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: auto;
+			min-width: 460px;
+			max-width: 55%; // Used in #right-container
+
+			h1 {
+				font-family: "Intro", Arial, sans-serif;
+				font-size: clamp(32px, 2.5vw, 2.5vw);
+				line-height: 1;
+				color: $white;
+			}
+
+			p {
+				line-height: 1.8;
+			}
+
+			#splash-button-container {
+				display: flex;
+				gap: 1.5vw;
+				margin-top: 20px;
+
+				.button.red {
+					background-color: transparent;
+				}
+			}
+
+			@include respond-to($tablet) {
+				max-width: 65%;
+				min-width: 350px;
+
+				#splash-button-container {
+					width: clamp(330px, 60%, 60%);
+
+					.button {
+						padding: 1.5vw 0;
+					}
+				}
+
+				h1 {
+					line-height: 1.2;
+					//font-size: 4.9vw;
+					font-size: clamp(24px, 4.2vw, 4.2vw);
+				}
+			}
+
+			@include respond-to(540px) {
+				max-width: none;
+				min-width: 0;
+				padding-top: 20px;
+
+				#splash-button-container {
+					//width: clamp(392px, 80%, 80%);
+					width: 100%;
+					flex-direction: column;
+
+					.button {
+						width: 100%;
+					}
+				}
+
+				h1 {
+					line-height: 1.2;
+					font-size: 6vw;
+				}
+			}
+
+			@include respond-to($mobile) {
+				#splash-button-container {
+					gap: 15px;
+
+					.button {
+						padding: 3vw;
+						font-size: 4vw;
+					}
+				}
+				h1 {
+					font-size: 8vw;
+					.break {
+						display: none;
+					}
+				}
+			}
+		}
+
+		@include respond-to($tablet) {
+			width: clamp(540px, 100%, 100%);
+			padding: 2rem 20px 2rem 20px;
+		}
+
+		@include respond-to(540px) {
+			width: 100%;
+			padding: 2rem 20px 2rem 20px;
+		}
+
+		@include respond-to($mobile) {
+			width: 100%;
+			padding: 2rem 40px 2rem 40px;
+		}
+
+		@include respond-to(340px) {
+			width: 100%;
+			padding: 2rem 20px 2rem 20px;
+		}
+	}
+
+	#splash-background-desktop {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		display: grid;
+		grid-template-columns:
+			minmax(auto, 15%) minmax(500px, 40%)
+			minmax(auto, 50%);
+		width: 100%;
+		min-width: 1100px;
+		height: 100%;
+		z-index: 1;
+
+		#center-container {
+			position: relative;
+			grid-column: 2 / 3;
+		}
+
+		#left-container {
+			position: relative;
+			grid-column: 1 / 2;
+			overflow: hidden;
+
+			#first-copy-left,
+			#second-copy-left {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+
+				.bg-image.left {
+					position: absolute;
+					left: -40px;
+					border: 4px solid $white;
+				}
+
+				#left-image-one {
+					bottom: 0; // handled by jsx
+					width: 100%;
+					height: 50%;
+				}
+
+				#left-image-two {
+					bottom: 40%; // handled by jsx
+					width: 80%;
+					height: 40%;
+				}
+
+				#left-image-three {
+					bottom: 0; // handled by jsx
+					width: 100%;
+					height: 50%;
+				}
+
+				#left-image-four {
+					bottom: 40%; // handled by jsx
+					width: 80%;
+					height: 40%;
+				}
+			}
+		}
+
+		#right-container {
+			position: relative;
+			grid-column: 3 / 4;
+			overflow: hidden;
+
+			#first-copy-right,
+			#second-copy-right {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+
+				.bg-image.right {
+					position: absolute;
+					border: 4px solid $white;
+				}
+
+				#right-image-one {
+					top: 0;
+					left: 49%;
+					width: clamp(100px, 10vw, 10vw);
+					height: clamp(100px, 10vw, 10vw);
+				}
+
+				#right-image-two {
+					top: 18%;
+					left: 10%;
+					width: 15vw;
+					width: clamp(115px, 15vw, 15vw);
+					height: clamp(115px, 15vw, 15vw);
+				}
+
+				#right-image-three {
+					top: 42%;
+					left: 26%;
+					width: clamp(190px, 25vw, 25vw);
+					height: clamp(115px, 15vw, 15vw);
+				}
+
+				#right-image-four {
+					top: 74%;
+					left: 4%;
+					width: clamp(80px, 8vw, 8vw);
+					height: clamp(80px, 8vw, 8vw);
+				}
+
+				#right-image-five {
+					top: 50%;
+					left: 89%;
+					width: 8vw;
+					height: 8vw;
+				}
+			}
+		}
+
+		@include respond-to(540px) {
+			display: none;
+		}
+	}
+
+	@include respond-to($tablet) {
+		height: auto;
+	}
+}

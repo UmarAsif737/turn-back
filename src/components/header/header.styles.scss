@@ -2,8 +2,10 @@
 @import "../../_global.styles";
 
 header {
+	position: relative;
 	background: $white;
 	border-bottom: 2px solid $black;
+	z-index: 999;
 
 	#nav-container {
 		position: relative;
@@ -107,6 +109,10 @@ header {
 							font-size: clamp(12px, 1vw, 20px);
 							text-decoration: none;
 							color: $black;
+
+							&:hover {
+								color: $red;
+							}
 						}
 					}
 				}
@@ -124,6 +130,11 @@ header {
 							align-items: center;
 							height: 100%;
 							color: $white;
+							transition: transform 0.1s linear;
+							&:hover {
+								color: $white;
+								transform: translateY(-3px);
+							}
 						}
 
 						#donate {
@@ -243,6 +254,7 @@ header {
 
 			#mobile-menu-container {
 				display: flex;
+				height: 110px;
 
 				#hamburger-container {
 					#hamburger,
@@ -263,18 +275,44 @@ header {
 
 		@include respond-to($mobile) {
 			align-items: flex-end;
+
 			#logo {
-				background: red;
+				img {
+					min-width: 154px;
+				}
+				@include respond-to(390px) {
+					padding: 0;
+					img {
+						max-width: 174px;
+
+						@include respond-to(350px) {
+							max-width: 140px;
+						}
+					}
+				}
 			}
 			#mobile-menu-container {
-				background: blue;
+				height: 140px;
+				justify-content: flex-start;
+				gap: 40px;
 				#mobile-sub-menu {
 					#mobile-donate,
 					#mobile-volunteer {
 						font-size: 12px;
 					}
 				}
+
+				@include respond-to(350px) {
+					gap: 20px;
+					#mobile-sub-menu {
+						flex-direction: column;
+						align-items: flex-end;
+					}
+				}
 			}
+		}
+
+		@include respond-to(360px) {
 		}
 	}
 }
