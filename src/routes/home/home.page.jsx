@@ -1,114 +1,156 @@
-import { useEffect } from "react";
+import Splash from "./components/splash.component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faArrowRight,
+	faCalendarDays,
+} from "@fortawesome/free-solid-svg-icons";
+import whoImg from "../../assets/who-we-are.jpg";
+import LadonnaImg from "../../assets/LaDonna-Doleman.jpg";
+import LadonnaVideo from "../../assets/Turn Back The Block - Ladonna.mp4";
 import "./home.styles.scss";
 
 const Home = () => {
-	// Scrolling image backgrounds
-	useEffect(() => {
-		const firstCopyLeft = document.getElementById("first-copy-left");
-		const secondCopyLeft = document.getElementById("second-copy-left");
-		const firstCopyRight = document.getElementById("first-copy-right");
-		const secondCopyRight = document.getElementById("second-copy-right");
-		const firstCopyMobile = document.getElementById("first-copy-mobile");
-		const secondCopyMobile = document.getElementById("second-copy-mobile");
-
-		let scrollSpeed = 0.2;
-		let firstPos = 0;
-		let secondPos = -100;
-
-		const animateScroll = () => {
-			firstPos += scrollSpeed;
-			secondPos += scrollSpeed;
-
-			if (firstPos >= 100) {
-				firstPos = secondPos - 100;
-			}
-
-			if (secondPos >= 100) {
-				secondPos = firstPos - 100;
-			}
-
-			firstCopyLeft.style.transform = `translateY(${firstPos}%)`;
-			secondCopyLeft.style.transform = `translateY(${secondPos}%)`;
-			firstCopyRight.style.transform = `translateY(${firstPos}%)`;
-			secondCopyRight.style.transform = `translateY(${secondPos}%)`;
-			firstCopyMobile.style.transform = `translateX(${firstPos}%)`;
-			secondCopyMobile.style.transform = `translateX(${secondPos}%)`;
-
-			requestAnimationFrame(animateScroll);
-		};
-
-		animateScroll();
-
-		// Cleanup function to stop animation if component unmounts
-		return () => {
-			cancelAnimationFrame(animateScroll);
-		};
-	}, []);
-
 	return (
 		<>
-			<main id="splash-container">
-				<div id="splash-background-mobile">
-					<div id="first-copy-mobile">
-						<div id="image-one-mobile" className="bg-image center"></div>
-						<div id="image-two-mobile" className="bg-image center"></div>
-						<div id="image-three-mobile" className="bg-image center"></div>
-					</div>
-					<div id="second-copy-mobile">
-						<div id="image-four-mobile" className="bg-image center"></div>
-						<div id="image-five-mobile" className="bg-image center"></div>
-						<div id="image-six-mobile" className="bg-image center"></div>
-					</div>
-				</div>
-				<div id="splash">
-					<div id="splash-content">
-						<h1>
-							Revitalizing Harrisburg,
-							<br className="break" /> One Block At a Time
-						</h1>
-						<p>
-							Through colunteers and donations, we create afforadable home
-							ownership opportunities where abandoned homes and vacant lots once
-							stood.
+			<Splash />
+			<section className="home-section">
+				<div className="container">
+					<div className="left-content">
+						<div className="heading-container">
+							<span className="subheading">Who We Are</span>
+							<h2 className="heading">
+								Building Pride, Communities, and Futures
+							</h2>
+						</div>
+						<p className="text-content">
+							Turn Back The Block is a catalyst in reveitalizing the Harrisburg
+							neighborhood through homeownership and the creation of quality
+							houseing. It is in promoting homeownership that we help change
+							lives, provide stability, a sense of pride, and economic stability
+							for homeowners.
 						</p>
-						<div id="splash-button-container">
-							<a href="#" className="button white">
-								View Our Projects
-							</a>
-							<button className="button red">Learn More</button>
+						<div className="link-container">
+							<FontAwesomeIcon icon={faArrowRight} className="link-icon" />
+							<a href="#">Discover Ways to Get Involved</a>
+						</div>
+					</div>
+					<div className="right-content">
+						<img src={whoImg} alt="" />
+					</div>
+				</div>
+			</section>
+			<section className="home-section impact">
+				<div className="container">
+					<div className="heading-container">
+						<span className="subheading">Our Impact</span>
+						<h2 className="heading">Over the Past Decade</h2>
+					</div>
+					<div className="number-container">
+						<div className="number">
+							<span className="counter">24</span>
+							<span className="subheading">
+								Maintained lots ready for new construction
+							</span>
+						</div>
+						<div className="number">
+							<span className="counter">09</span>
+							<span className="subheading">New homeowners added</span>
+						</div>
+						<div className="number">
+							<span className="counter">08</span>
+							<span className="subheading">Homes renovated</span>
+						</div>
+						<div className="number">
+							<span className="counter">07</span>
+							<span className="subheading">Homes constructed</span>
+						</div>
+						<div className="number">
+							<span className="counter">01</span>
+							<span className="subheading">
+								Renovated office / warehouse space
+							</span>
 						</div>
 					</div>
 				</div>
-				<div id="splash-background-desktop">
-					<div id="left-container">
-						<div id="first-copy-left" className="first-copy">
-							<div id="left-image-one" className="bg-image left"></div>
-							<div id="left-image-two" className="bg-image left"></div>
-						</div>
-						<div id="second-copy-left" className="second-copy">
-							<div id="left-image-three" className="bg-image left"></div>
-							<div id="left-image-four" className="bg-image left"></div>
-						</div>
+			</section>
+			<section className="home-section events">
+				<div className="container">
+					<div className="left-content">
+						<img src={whoImg} alt="" />
 					</div>
-					<div id="center-container"></div>
-					<div id="right-container">
-						<div id="first-copy-right" className="first-copy">
-							<div id="right-image-one" className="bg-image right"></div>
-							<div id="right-image-two" className="bg-image right"></div>
-							<div id="right-image-three" className="bg-image right"></div>
-							<div id="right-image-four" className="bg-image right"></div>
-							<div id="right-image-five" className="bg-image right"></div>
+					<div className="right-content">
+						<div className="heading-container">
+							<span className="subheading">Upcoming Events</span>
+							<h2 className="heading">
+								Turn Back the <span className="red-heading">Block Party</span>
+							</h2>
 						</div>
-						<div id="second-copy-right" className="second-copy">
-							<div id="right-image-one" className="bg-image right"></div>
-							<div id="right-image-two" className="bg-image right"></div>
-							<div id="right-image-three" className="bg-image right"></div>
-							<div id="right-image-four" className="bg-image right"></div>
-							<div id="right-image-five" className="bg-image right"></div>
+						<p className="text-content">
+							Bring your friends and family to help clean up Harrisburg! We will
+							begin at 10am with a neighborhood and warehouse clean up. We can't
+							wait to see you!
+						</p>
+						<div className="link-container">
+							<FontAwesomeIcon icon={faArrowRight} className="link-icon" />
+							<a href="#">Apply to Volunteer Today</a>
+						</div>
+						<div className="calendar-container">
+							<FontAwesomeIcon
+								icon={faCalendarDays}
+								className="calendar-icon"
+							/>
+							<div className="calendar-information">
+								<span>Saturday, June 10 • 10am-12pm</span>
+								<span>1924 Battle Row • Augusta, GA</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</main>
+			</section>
+			<section className="home-section testimonials">
+				<div className="container">
+					<div className="content">
+						<div className="subheading-quote">
+							<span className="subheading">Lorem Ipsum</span>
+							<blockquote>
+								"Turn Back the Block helped me lorem ipsum dolar sit amet lorem
+								sit"
+							</blockquote>
+						</div>
+
+						<a href="#" className="button">
+							Get Involved
+						</a>
+					</div>
+				</div>
+			</section>
+			<section className="home-section spotlight">
+				<div className="container">
+					<div className="left-content">
+						<div className="heading-container">
+							<span className="subheading">Spotlight Story</span>
+							<h2 className="heading">Ladonna Doleman</h2>
+						</div>
+						<p className="text-content">
+							In July 2020, Turn Back the Block welcomed Ladonna Doleman and her
+							two sons to the Turn Back the Block family. Ladonna worked hard as
+							an applicant for nearly three years before purchasing her
+							3-bedroom/ 2-bathroom home through the Turn Back the Block
+							program. Ladonna completed over 350 sweat equity hours, attended
+							numerous financial counseling sessions working to repair her
+							credit and create a family budget that set she and her boys on a
+							road of savings. Homeownership for Ladonna means stability and has
+							created economic mobility for she and her family.
+						</p>
+					</div>
+					<div className="right-content">
+						<video controls poster={LadonnaImg}>
+							<source src={LadonnaVideo} type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+			</section>
 		</>
 	);
 };
