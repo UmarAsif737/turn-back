@@ -1,0 +1,82 @@
+// Map Component
+@import "../../_global.styles";
+
+#map-module {
+	position: relative;
+	width: 100%;
+	height: 500px;
+
+	#locations-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: blue;
+		display: flex;
+		justify-content: center;
+
+		#locations-balancer {
+			position: relative;
+			width: 70%;
+			width: clamp(calc(768px - 20px), 70vw, 70vw);
+			height: 100%;
+
+			#locations {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: start;
+				//grid-template-rows: 1fr;
+				gap: 20px; // Come back to this
+				width: 50%;
+				height: auto;
+				padding-left: 20px;
+				background: purple;
+
+				.single-location {
+					position: relative;
+					height: auto;
+					border: 1px solid white;
+					cursor: pointer;
+
+					&:hover {
+						background: white;
+					}
+
+					.image-container {
+						position: relative;
+						width: 100%;
+						height: 100px;
+
+						.status {
+							position: absolute;
+							top: 0;
+							right: 0;
+							background: red;
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.info-container {
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+
+	#map-container {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 50%;
+		height: 100%;
+		background: red;
+		border: 1px solid white;
+	}
+}

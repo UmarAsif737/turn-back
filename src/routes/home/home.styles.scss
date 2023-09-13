@@ -1,6 +1,48 @@
 // Home Page
 @import "../../_global.styles";
 
+//
+.heading-container {
+	.subheading {
+		font-family: $mont;
+		font-size: clamp(14px, 0.8vw, 1vw);
+		font-weight: 700;
+		color: $red;
+		text-transform: uppercase;
+	}
+	.heading {
+		font-family: $mont;
+		font-size: clamp(26px, 2vw, 2vw);
+		font-weight: 600;
+		color: $black;
+		line-height: 1.2;
+		margin-top: 5px;
+		.red-heading {
+			color: $red;
+			font-weight: 700;
+		}
+	}
+}
+.text-content {
+	font-size: 16px;
+	color: $black;
+}
+
+.link-container {
+	//margin-top: 20px;
+	.link-icon {
+		color: $red;
+		font-size: 12px;
+		margin-right: 5px;
+	}
+	a {
+		color: $red;
+		text-underline-offset: 2px;
+		font-weight: 600;
+	}
+}
+//
+
 .home-section {
 	width: 100%;
 	background: $white;
@@ -10,61 +52,40 @@
 	.container {
 		display: flex;
 		gap: 4vw;
-		width: clamp(768px, 70vw, 70vw);
+		width: clamp(calc(768px - 20px), 70vw, 70vw);
 		height: auto;
 		padding: 6rem 20px 6rem 20px;
 
-		// Page-sepcific globals //
-
-		.heading-container {
-			.subheading {
-				font-family: $mont;
-				font-size: clamp(14px, 0.8vw, 1vw);
-				font-weight: 700;
-				color: $red;
-				text-transform: uppercase;
-			}
-			.heading {
-				font-family: $mont;
-				font-size: clamp(26px, 2vw, 2vw);
-				font-weight: 600;
-				color: $black;
-				line-height: 1.2;
-				margin-top: 5px;
-				.red-heading {
-					color: $red;
-					font-weight: 700;
-				}
-			}
-		}
-		.text-content {
-			font-size: 16px;
-			color: $black;
+		@include respond-to($tablet) {
+			width: clamp(320px, 100%, 100%);
+			flex-direction: column-reverse;
+			padding: 40px 20px;
 		}
 
-		.link-container {
-			.link-icon {
-				color: $red;
-				font-size: 12px;
-				margin-right: 5px;
-			}
-			a {
-				color: $red;
-				text-underline-offset: 2px;
-				font-weight: 600;
-			}
+		@include respond-to($mobile) {
+			padding: 40px;
 		}
 
-		// End of Page-specific globals //
+		@include respond-to(340px) {
+			padding: 40px 20px;
+		}
 
 		.left-content,
 		.right-content {
 			width: 50%;
+
+			@include respond-to($tablet) {
+				width: 100%;
+			}
 		}
 		.left-content {
 			display: flex;
 			flex-direction: column;
-			gap: 1vw;
+			gap: 1.5vw;
+
+			@include respond-to($tablet) {
+				gap: clamp(20px, 3vw, 3vw);
+			}
 		}
 		.right-content {
 			position: relative;
@@ -74,6 +95,12 @@
 				width: 100%;
 				height: clamp(100%, 25vw, 30vw);
 				object-fit: cover;
+
+				@include respond-to($tablet) {
+					position: relative;
+					height: 100%;
+					max-height: 400px;
+				}
 			}
 		}
 	}
@@ -84,10 +111,30 @@
 	.container {
 		flex-direction: column;
 		padding: 5vw 20px 5vw 20px;
+
+		@include respond-to($mobile) {
+			padding: 40px;
+		}
+
+		@include respond-to(340px) {
+			padding: 40px 20px;
+		}
 		.number-container {
 			display: flex;
 			align-items: start;
 			justify-content: space-between;
+
+			@include respond-to($tablet) {
+				justify-content: center;
+				flex-wrap: wrap;
+				row-gap: 20px;
+			}
+
+			@include respond-to($mobile) {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				row-gap: 0;
+			}
 
 			.number {
 				display: flex;
@@ -97,11 +144,39 @@
 				text-align: center;
 				width: clamp(140px, 10vw, 10vw);
 
+				@include respond-to($tablet) {
+					flex-basis: 33.3%;
+
+					&:nth-of-type(4),
+					&:nth-of-type(5) {
+						flex-basis: 40%;
+					}
+				}
+
+				@include respond-to($mobile) {
+					flex-basis: auto;
+					flex-direction: row;
+					width: 100%;
+					justify-content: flex-start;
+					text-align: left;
+					gap: 20px;
+				}
+
 				.counter {
 					font-family: $intro;
-					font-size: 4vw;
 					font-size: clamp(60px, 4vw, 6vw);
 					color: $red;
+
+					@include respond-to($tablet) {
+						font-size: clamp(60px, 4vw, 6vw);
+					}
+
+					@include respond-to($mobile) {
+						line-height: 1.3;
+						display: block;
+						width: 100%;
+						max-width: 80px;
+					}
 				}
 				.subheading {
 					color: $black;
@@ -116,31 +191,57 @@
 .events {
 	.container {
 		align-items: center;
+
+		@include respond-to($tablet) {
+			flex-direction: column;
+		}
 		.left-content {
 			img {
-				height: 100%;
+				align-self: stretch;
 				object-fit: cover;
+
+				@include respond-to($tablet) {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					max-height: 400px;
+				}
 			}
 		}
 		.right-content {
 			display: flex;
 			flex-direction: column;
-			gap: 1vw;
-			.calendar-container {
+			gap: 1.5vw;
+			@include respond-to($tablet) {
+				gap: clamp(20px, 3vw, 3vw);
+			}
+			.link-calendar-container {
 				display: flex;
-				align-items: center;
-				gap: clamp(10px, 1vw, 1vw);
-				.calendar-icon {
-					color: $red;
-					font-size: 40px;
+				flex-direction: column;
+				gap: 1.5vw;
+				@include respond-to($tablet) {
+					flex-direction: column-reverse;
+					@include respond-to($tablet) {
+						gap: clamp(20px, 3vw, 3vw);
+					}
 				}
-				.calendar-information {
-					display: grid;
-					flex-direction: column;
+				.calendar-container {
+					display: flex;
+					align-items: center;
+					column-gap: clamp(15px, 1vw, 1vw);
+					.calendar-icon {
+						color: $red;
+						font-size: 40px;
+					}
+					.calendar-information {
+						display: grid;
+						flex-direction: column;
 
-					span {
-						font-weight: 600;
-						color: $black;
+						span {
+							font-weight: 600;
+							color: $black;
+							line-height: 1.3;
+						}
 					}
 				}
 			}
@@ -168,9 +269,16 @@
 			flex-direction: column;
 			width: 60%;
 			gap: 4vw;
+			@include respond-to($tablet) {
+				width: clamp(calc(431px - 20px), 70%, 70%);
+			}
+			@include respond-to($mobile) {
+				width: 100%;
+				gap: 8vw;
+			}
 			.subheading {
 				font-family: $mont;
-				font-size: clamp(14px, 0.8vw, 1vw);
+				font-size: clamp(18px, 0.8vw, 1vw);
 				font-weight: 700;
 				color: $white;
 				text-transform: uppercase;
@@ -180,11 +288,12 @@
 				font-family: $mont;
 				font-weight: 600;
 				line-height: 1.4;
-				font-size: 2.4vw;
+				font-size: clamp(26px, 2.4vw, 2.4vw);
 				margin-top: 1vw;
 			}
 			.button {
 				color: $white;
+				font-size: 16px;
 				//width: 14vw;
 				//padding: 1vw 4vw;
 			}
@@ -200,11 +309,12 @@
 			// min-width: 32vw;
 			// max-height: 32vw;
 			video {
-				height: 100%;
+				//height: 100%;
 				width: 100%;
 				object-fit: cover;
-				min-width: 32vw;
-				max-height: 32vw;
+				//min-width: 32vw;
+				//max-height: 32vw;
+				align-self: stretch;
 			}
 		}
 	}

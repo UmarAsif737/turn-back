@@ -1,7 +1,9 @@
+import Map from "../../components/map/map.component";
+
 const About = () => {
 	return (
 		<>
-			<h1>About Page</h1>
+			<Map />
 		</>
 	);
 };

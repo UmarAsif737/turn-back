@@ -1,0 +1,25 @@
+{
+	"locations": [
+		{
+			"id": 1,
+			"address": "621 Metcalf St",
+			"image": "621 Metcalf Street.jpg",
+			"plat": "test-plat.pdf",
+			"status": "sold"
+		},
+		{
+			"id": 2,
+			"address": "625 Metcalf St",
+			"image": "625 Metcalf Street.jpg",
+			"plat": "test-plat.pdf",
+			"status": "owned"
+		},
+		{
+			"id": 3,
+			"address": "627 Metcalf St",
+			"image": "627 Metcalf Street.jpg",
+			"plat": "test-plat.pdf",
+			"status": ""
+		}
+	]
+}

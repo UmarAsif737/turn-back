@@ -1,9 +1,5 @@
 import Splash from "./components/splash.component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faArrowRight,
-	faCalendarDays,
-} from "@fortawesome/free-solid-svg-icons";
 import whoImg from "../../assets/who-we-are.jpg";
 import LadonnaImg from "../../assets/LaDonna-Doleman.jpg";
 import LadonnaVideo from "../../assets/Turn Back The Block - Ladonna.mp4";
@@ -30,7 +26,7 @@ const Home = () => {
 							for homeowners.
 						</p>
 						<div className="link-container">
-							<FontAwesomeIcon icon={faArrowRight} className="link-icon" />
+							<i className="fa-regular fa-arrow-right link-icon"></i>
 							<a href="#">Discover Ways to Get Involved</a>
 						</div>
 					</div>
@@ -90,18 +86,17 @@ const Home = () => {
 							begin at 10am with a neighborhood and warehouse clean up. We can't
 							wait to see you!
 						</p>
-						<div className="link-container">
-							<FontAwesomeIcon icon={faArrowRight} className="link-icon" />
-							<a href="#">Apply to Volunteer Today</a>
-						</div>
-						<div className="calendar-container">
-							<FontAwesomeIcon
-								icon={faCalendarDays}
-								className="calendar-icon"
-							/>
-							<div className="calendar-information">
-								<span>Saturday, June 10 • 10am-12pm</span>
-								<span>1924 Battle Row • Augusta, GA</span>
+						<div className="link-calendar-container">
+							<div className="link-container">
+								<i className="fa-regular fa-arrow-right link-icon"></i>
+								<a href="#">Apply to Volunteer Today</a>
+							</div>
+							<div className="calendar-container">
+								<i className="fa-thin fa-calendar-days calendar-icon"></i>
+								<div className="calendar-information">
+									<span>Saturday, June 10 • 10am-12pm</span>
+									<span>1924 Battle Row • Augusta, GA</span>
+								</div>
 							</div>
 						</div>
 					</div>
