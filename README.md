@@ -1,8 +1,19 @@
-# React + Vite
+# Turn Back The Block
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website built with Vite + React
+Developed by The Kru - https://thekru.rocks/
 
-Currently, two official plugins are available:
+# Location Data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Location data can be found within the `Map` component, including all `Images` and `Plats`. If you're adding a new `Address`, it must be added to the `locations.json`. If you're adding new `Images` and `Plats`, each must share the same name as their respective `Address`. Also, `Images` must be `.jpg` - For example:
+
+123 Flower Road,
+123 Flower Road.jpg
+123 Flower Road.pdf
+
+This is because `Image` & `Plat` mapping is done by concatenating the `Address` with `.jpg` & `.pdf` string literals.
+
+# Map
+
+1. static coordinates
+2. broken map

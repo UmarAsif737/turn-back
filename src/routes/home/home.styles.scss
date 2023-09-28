@@ -39,6 +39,10 @@
 		color: $red;
 		text-underline-offset: 2px;
 		font-weight: 600;
+
+		&:hover {
+			color: $black;
+		}
 	}
 }
 //
@@ -108,6 +112,10 @@
 
 .impact {
 	background: $dark-gray;
+
+	@include respond-to($tablet) {
+		padding-bottom: 10vw;
+	}
 	.container {
 		flex-direction: column;
 		padding: 5vw 20px 5vw 20px;
@@ -189,13 +197,19 @@
 }
 
 .events {
+	@include respond-to($tablet) {
+		margin-top: -50px;
+		background: transparent;
+	}
 	.container {
 		align-items: center;
 
 		@include respond-to($tablet) {
 			flex-direction: column;
+			padding-top: 0;
 		}
 		.left-content {
+			position: relative;
 			img {
 				align-self: stretch;
 				object-fit: cover;
@@ -240,7 +254,7 @@
 						span {
 							font-weight: 600;
 							color: $black;
-							line-height: 1.3;
+							line-height: 1.6;
 						}
 					}
 				}
@@ -294,8 +308,9 @@
 			.button {
 				color: $white;
 				font-size: 16px;
-				//width: 14vw;
-				//padding: 1vw 4vw;
+				@include respond-to($mobile) {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -303,6 +318,41 @@
 
 .spotlight {
 	.container {
+		.left-content {
+			.text-content {
+				#ladonna-accordion {
+					display: inline;
+					@include respond-to($mobile) {
+						display: block;
+						max-height: 0;
+						height: auto;
+						overflow: hidden;
+						transition: max-height 0.2s linear;
+						will-change: max-height;
+
+						&.open-accordion {
+							max-height: 999px;
+						}
+					}
+				}
+			}
+			#ladonna-accordion-button {
+				border: none;
+				background: 0;
+				padding: 4px 4px 4px 0;
+				text-transform: uppercase;
+				color: $black;
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				font-family: $mont;
+				align-self: flex-start;
+				cursor: pointer;
+				display: none;
+				@include respond-to($mobile) {
+					display: block;
+				}
+			}
+		}
 		.right-content {
 			display: flex;
 			align-items: center;

@@ -1,11 +1,22 @@
 import Splash from "./components/splash.component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import whoImg from "../../assets/who-we-are.jpg";
 import LadonnaImg from "../../assets/LaDonna-Doleman.jpg";
 import LadonnaVideo from "../../assets/Turn Back The Block - Ladonna.mp4";
 import "./home.styles.scss";
 
 const Home = () => {
+	let isAccordionOpen = false; // Define the initial state
+
+	const accordion = () => {
+		const hiddenText = document.getElementById("ladonna-accordion");
+		const accordionButton = document.getElementById("ladonna-accordion-button");
+
+		isAccordionOpen = !isAccordionOpen; // Toggle the state
+
+		accordionButton.innerText = isAccordionOpen ? "SHOW LESS -" : "READ MORE +";
+		hiddenText.classList[isAccordionOpen ? "add" : "remove"]("open-accordion");
+	};
+
 	return (
 		<>
 			<Splash />
@@ -128,15 +139,21 @@ const Home = () => {
 						</div>
 						<p className="text-content">
 							In July 2020, Turn Back the Block welcomed Ladonna Doleman and her
-							two sons to the Turn Back the Block family. Ladonna worked hard as
-							an applicant for nearly three years before purchasing her
-							3-bedroom/ 2-bathroom home through the Turn Back the Block
-							program. Ladonna completed over 350 sweat equity hours, attended
-							numerous financial counseling sessions working to repair her
-							credit and create a family budget that set she and her boys on a
-							road of savings. Homeownership for Ladonna means stability and has
-							created economic mobility for she and her family.
+							two sons to the Turn Back the Block family.{" "}
+							<span id="ladonna-accordion">
+								Ladonna worked hard as an applicant for nearly three years
+								before purchasing her 3-bedroom/ 2-bathroom home through the
+								Turn Back the Block program. Ladonna completed over 350 sweat
+								equity hours, attended numerous financial counseling sessions
+								working to repair her credit and create a family budget that set
+								she and her boys on a road of savings. Homeownership for Ladonna
+								means stability and has created economic mobility for she and
+								her family.
+							</span>
 						</p>
+						<button id="ladonna-accordion-button" onClick={accordion}>
+							Read More +
+						</button>
 					</div>
 					<div className="right-content">
 						<video controls poster={LadonnaImg}>
