@@ -11,6 +11,7 @@ const Map = () => {
 	///////////////////
 	// Declarations //
 	/////////////////
+
 	const locationImagePath = "src/components/map/locations/images/";
 	const locationPlatPath = "src/components/map/locations/plats/";
 
@@ -24,9 +25,27 @@ const Map = () => {
 		.filter((location) => location.status === "construction")
 		.length.toString();
 
+	const StatusMarker = ({ status }) => {
+		let statusColor;
+		if (status === "owned") {
+			statusColor = "#a9accd";
+		} else if (status === "sold") {
+			statusColor = "#7e6c2a";
+		} else {
+			statusColor = "#ec1d25";
+		}
+
+		const statusMarkerStyle = {
+			backgroundColor: statusColor,
+		};
+
+		return <div className="status-marker" style={statusMarkerStyle}></div>;
+	};
+
 	//////////////////
 	// Google Maps //
 	////////////////
+
 	const mapsKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 	const mapRef = useRef(null);
 	const [mapReady, setMapReady] = useState(false);
@@ -68,20 +87,20 @@ const Map = () => {
 	const Marker = React.forwardRef(
 		({ isHovered, onMouseEnter, onMouseLeave, status }, ref) => {
 			// hardcoded colors from _global.styles.scss
-			let bgColor;
+			let markerColor;
 			if (status === "owned") {
-				bgColor = "#a9accd";
+				markerColor = "#a9accd";
 			} else if (status === "sold") {
-				bgColor = "#7e6c2a";
+				markerColor = "#7e6c2a";
 			} else {
-				bgColor = "#ec1d25";
+				markerColor = "#ec1d25";
 			}
 
 			const markerStyle = {
 				width: isHovered ? "40px" : "20px",
 				height: isHovered ? "40px" : "20px",
 				borderRadius: "100px",
-				backgroundColor: bgColor,
+				backgroundColor: markerColor,
 				cursor: "pointer",
 				position: "absolute",
 				left: "50%",
@@ -188,19 +207,21 @@ const Map = () => {
 										</div>
 										<div className="info-container">
 											<div className="status-container">
-												<span className="status">{location.status}</span>
+												<StatusMarker status={location.status} />
 											</div>
-											<p>{location.address}</p>
-											{location.status !== "owned" && (
-												<a
-													className="plat"
-													href={locationPlatPath + location.address + ".pdf"}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													View Plat
-												</a>
-											)}
+											<div className="address-container">
+												<p>{location.address}</p>
+												{location.status !== "owned" && (
+													<a
+														className="plat"
+														href={locationPlatPath + location.address + ".pdf"}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														View Plat
+													</a>
+												)}
+											</div>
 										</div>
 									</div>
 								))}
@@ -218,7 +239,6 @@ const Map = () => {
 						{mapReady &&
 							locationData.locations.map((coord, index) => (
 								<Marker
-									className="my-marker"
 									key={coord.lat}
 									lat={coord.lat}
 									lng={coord.lng}
