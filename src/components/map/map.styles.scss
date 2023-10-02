@@ -18,7 +18,7 @@
 		#locations-balancer {
 			position: relative;
 			width: 70%;
-			width: clamp(calc(768px - 20px), 70vw, 70vw);
+			width: clamp(calc($tablet - 20px), 70vw, 70vw);
 			height: 100%;
 
 			#locations {
@@ -36,6 +36,7 @@
 					position: relative;
 					height: auto;
 					padding: 20px;
+					padding: clamp(10px, 1vw, 1vw);
 
 					&.highlight {
 						background: $dark-gray;
@@ -45,14 +46,16 @@
 						position: relative;
 						width: 100%;
 						height: auto;
-						background: blue;
 
 						.status {
 							display: none; // on mobile
 							position: absolute;
 							top: 0;
 							right: 0;
-							background: red;
+
+							@include respond-to($tablet) {
+								display: inline-block;
+							}
 						}
 
 						img {
@@ -73,24 +76,27 @@
 						.status-container {
 							.status-marker {
 								// add clamps here later
-								width: 0.8vw;
-								height: 0.8vw;
-								border-radius: 0.8vw;
+								width: 16px;
+								height: 16px;
+								border-radius: 16px;
 								margin-right: 6px;
 							}
 						}
 
 						.address-container {
+							display: flex;
+							flex-direction: column;
+							row-gap: 5px;
 							p,
 							a {
 								font-family: $mont;
 								font-weight: 600;
 								color: $black;
-								line-height: 1.1;
+								line-height: 17px;
 							}
 
 							a {
-								font-size: 0.6vw;
+								font-size: clamp(10px, 0.7vw, 0.7vw);
 								text-decoration: none;
 								text-transform: uppercase;
 
@@ -116,6 +122,7 @@
 			position: absolute;
 			display: flex;
 			column-gap: 30px;
+			column-gap: clamp(0px, 2vw, 2vw);
 			left: 10px;
 			bottom: 10px;
 			width: auto;
@@ -125,6 +132,10 @@
 			border-radius: 50px;
 			background: $white;
 			z-index: 0;
+
+			@include respond-to($tablet) {
+				display: none;
+			}
 
 			.key-container {
 				position: relative;
@@ -149,6 +160,7 @@
 				.count {
 					font-family: $mont;
 					font-size: 0.8vw;
+					font-size: clamp(10px, 0.8vw, 0.8vw);
 					font-weight: 600;
 					text-transform: uppercase;
 					color: $black;
