@@ -3,18 +3,16 @@ import GoogleMap from "google-maps-react-markers";
 import locationData from "./locations/locations.json";
 import "./map.styles.scss";
 
-///////////////////////////////
-// Marker Component for Map //
-/////////////////////////////
-
 const Map = () => {
 	///////////////////
 	// Declarations //
 	/////////////////
 
+	// Paths
 	const locationImagePath = "src/components/map/locations/images/";
 	const locationPlatPath = "src/components/map/locations/plats/";
 
+	// Status color and length for desktop
 	const ownedStatus = locationData.locations
 		.filter((location) => location.status === "owned")
 		.length.toString();
@@ -40,6 +38,28 @@ const Map = () => {
 		};
 
 		return <div className="status-marker" style={statusMarkerStyle}></div>;
+	};
+
+	// Status color for mobile
+	const StatusMarkerMobile = ({ status }) => {
+		let statusColor;
+		if (status === "owned") {
+			statusColor = "#a9accd";
+		} else if (status === "sold") {
+			statusColor = "#7e6c2a";
+		} else {
+			statusColor = "#ec1d25";
+		}
+
+		const statusMarkerMobileStyle = {
+			backgroundColor: statusColor,
+		};
+
+		return (
+			<span className="status" style={statusMarkerMobileStyle}>
+				{status}
+			</span>
+		);
 	};
 
 	//////////////////
@@ -199,7 +219,7 @@ const Map = () => {
 										key={location.address}
 									>
 										<div className="image-container">
-											<span className="status">{location.status}</span>
+											<StatusMarkerMobile status={location.status} />
 											<img
 												src={locationImagePath + location.address + ".jpg"}
 												alt={location.address}
