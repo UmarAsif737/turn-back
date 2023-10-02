@@ -1,6 +1,96 @@
-div {
-	width: 100%;
-	height: 100px;
-	background: black;
-	color: white;
+///////////////////////
+// Footer Component //
+/////////////////////
+
+@import "../../_global.styles";
+
+footer {
+	#footer-section {
+		width: 100%;
+		height: auto;
+		background: $black;
+		#footer-container {
+			width: clamp($tablet, 70vw, 70vw);
+			margin: 0 auto;
+			padding: 60px 20px;
+
+			@include respond-to($tablet) {
+				width: 100%;
+			}
+
+			#footer-top {
+				display: flex;
+				justify-content: space-between;
+				#footer-right {
+					display: flex;
+					justify-content: space-between;
+					width: clamp(400px, 40%, 40%);
+					background: red;
+				}
+				.footer-menu {
+					h3 {
+						font-size: 18px;
+						font-family: $mont;
+					}
+					ul {
+						list-style: none;
+						margin-top: 10px;
+
+						li {
+							padding: 5px 0;
+
+							a {
+								text-decoration: none;
+								color: $white;
+								font-family: $mont;
+							}
+						}
+					}
+				}
+
+				#footer-left {
+					display: flex;
+					gap: 30px;
+
+					#contact-information {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+						a {
+							font-family: $mont;
+							text-decoration: none;
+							color: $white;
+
+							i {
+								font-size: 20px;
+								margin-right: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#footer-bottom {
+			border-top: 1px solid #444;
+			padding: 20px;
+			#footer-bottom-content {
+				width: clamp($tablet, 70vw, 70vw);
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				font-size: 12px;
+
+				@include respond-to($tablet) {
+					width: 100%;
+				}
+
+				@include respond-to(450px) {
+					flex-direction: column-reverse;
+					align-items: center;
+					gap: 20px;
+				}
+			}
+		}
+	}
 }

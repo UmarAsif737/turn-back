@@ -1,9 +1,10 @@
-import Map from "../../components/map/map.component";
+//import Instagram from "../../components/instagram/instagram.component";
+import Footer from "../../components/footer/footer.component";
 
 const About = () => {
 	return (
 		<>
-			<Map />
+			<Footer />
 		</>
 	);
 };

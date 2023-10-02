@@ -1,4 +1,7 @@
 import Splash from "./components/splash.component";
+import Map from "../../components/map/map.component";
+import Instagram from "../../components/instagram/instagram.component";
+import CTA from "../../components/cta/cta.component";
 import whoImg from "../../assets/who-we-are.jpg";
 import LadonnaImg from "../../assets/LaDonna-Doleman.jpg";
 import LadonnaVideo from "../../assets/Turn Back The Block - Ladonna.mp4";
@@ -163,6 +166,9 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			<Map />
+			<Instagram />
+			<CTA />
 		</>
 	);
 };

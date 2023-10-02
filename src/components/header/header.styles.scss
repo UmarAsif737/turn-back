@@ -1,4 +1,7 @@
-// Header
+/////////////
+// Header //
+///////////
+
 @import "../../_global.styles";
 
 header {
@@ -9,7 +12,6 @@ header {
 
 	#nav-container {
 		position: relative;
-		//width: clamp(calc(768px - 20px), 70vw, 70vw);
 		width: clamp(768px, 70vw, 70vw);
 		margin: 0 auto;
 		display: flex;
@@ -23,7 +25,6 @@ header {
 			flex-grow: 0;
 			flex-shrink: 1;
 			transform: translateY(clamp(5px, 0.3vw, 0.3vw));
-			//min-width: calc(10vw + 40px);
 			z-index: 420;
 			width: clamp(110px, 10vw, 10vw);
 
@@ -238,7 +239,7 @@ header {
 		}
 
 		@include respond-to($tablet) {
-			width: clamp(320px, 100%, 100%); //could clamp
+			width: clamp(320px, 100%, 100%);
 			align-items: flex-start;
 		}
 

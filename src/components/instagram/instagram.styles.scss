@@ -1,0 +1,38 @@
+//////////////////////////
+// Instagram Component //
+////////////////////////
+
+@import "../../_global.styles";
+
+#instagram-section {
+	width: clamp(768px, 70vw, 70vw);
+	margin: 0 auto;
+	padding: 60px 20px;
+
+	@include respond-to($tablet) {
+		width: 100%;
+	}
+
+	#instagram-container {
+		width: 100%;
+
+		#instagram-text {
+			display: flex;
+			align-items: center;
+			h3 {
+				font-family: $mont;
+				font-weight: 500;
+				color: $black;
+				flex-grow: 1;
+				flex-shrink: 0;
+				margin-right: 20px;
+
+				a {
+					color: $red;
+					text-decoration: none;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
