@@ -197,6 +197,10 @@ const Map = () => {
 
 	return (
 		<>
+			<div id="property-heading-container">
+				<h2 id="property-heading">Our Properties</h2>
+				<div className="inline-line"></div>
+			</div>
 			<section id="map-module">
 				<div id="locations-container">
 					<div id="locations-balancer">

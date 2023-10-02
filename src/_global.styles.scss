@@ -8,6 +8,17 @@
 
 //// Variables
 
+// mixins
+@mixin respond-to($breakpoint) {
+	@media (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+// Breakpoints
+$tablet: 768px;
+$mobile: 431px;
+
 // Colors
 $red: #ec1d25;
 $brown: #7e6c2a;
@@ -59,12 +70,14 @@ p {
 	}
 }
 
-// Breakpoints
-$tablet: 768px;
-$mobile: 431px;
+.inline-line {
+	height: 2px;
+	background: $black;
+	width: 100%;
+	flex-shrink: 1;
+	flex-grow: 0;
 
-@mixin respond-to($breakpoint) {
-	@media (max-width: $breakpoint) {
-		@content;
+	@include respond-to($mobile) {
+		display: none;
 	}
 }

@@ -1,10 +1,34 @@
 // Map Component
 @import "../../_global.styles";
 
+#property-heading-container {
+	width: clamp($tablet, 70vw, 70vw);
+	margin: 0 auto;
+	padding: 40px 20px 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	@include respond-to($tablet) {
+		width: 100%;
+	}
+
+	#property-heading {
+		font-family: "Intro", Arial, sans-serif;
+		font-size: clamp(26px, 3vw, 3.5vw);
+		color: $black;
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+}
+
 #map-module {
 	position: relative;
 	width: 100%;
 	height: 760px;
+	border: 1px solid $dark-gray;
+	border-left-width: 0;
+	border-right-width: 0;
 
 	@include respond-to($tablet) {
 		height: auto;
@@ -44,8 +68,6 @@
 				height: 100%;
 				overflow-y: scroll;
 				scrollbar-width: thin;
-				//padding-left: 20px;
-				//row-gap: 2vw;
 
 				@include respond-to($tablet) {
 					width: 100%;
