@@ -6,6 +6,7 @@ import {
 	Outlet,
 } from "react-router-dom";
 import Header from "./components/header/header.component";
+import Footer from "./components/footer/footer.component";
 import Heading from "./components/heading/heading.component";
 import Home from "./routes/home/home.page";
 import About from "./routes/about/about.page";
@@ -27,8 +28,8 @@ const App = () => {
 				<Route path="projects/:directory" element={<ProjectViewer />} />
 				<Route path="*" element={<NoPage />} /> */}
 			</Routes>
-			{/* <Outlet />
-			<Footer /> */}
+			{/* <Outlet /> */}
+			<Footer />
 		</Router>
 	);
 };

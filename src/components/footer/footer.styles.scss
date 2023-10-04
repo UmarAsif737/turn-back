@@ -12,20 +12,47 @@ footer {
 		#footer-container {
 			width: clamp($tablet, 70vw, 70vw);
 			margin: 0 auto;
-			padding: 60px 20px;
+			padding: 60px 20px 50px 20px;
 
 			@include respond-to($tablet) {
 				width: 100%;
 			}
 
+			@include respond-to($mobile) {
+				padding:40px 20px 30px 20px;
+			}
+
 			#footer-top {
 				display: flex;
 				justify-content: space-between;
-				#footer-right {
+
+				#footer-left {
 					display: flex;
 					justify-content: space-between;
-					width: clamp(400px, 40%, 40%);
-					background: red;
+					width: clamp(360px, 40%, 40%);
+
+					@include respond-to($mobile) {
+						display:none;
+					}
+					
+					#learn-more {
+						@include respond-to($tablet) {
+							width:auto;
+						}
+						#get-involved-mobile {
+							display:none;
+
+							@include respond-to($tablet) {
+								display:inline;
+							}
+						}
+					}
+
+					#get-involved {
+						@include respond-to($tablet) {
+							display:none;
+						}
+					}
 				}
 				.footer-menu {
 					h3 {
@@ -48,22 +75,64 @@ footer {
 					}
 				}
 
-				#footer-left {
+				#footer-right {
 					display: flex;
+					align-items: flex-start;
 					gap: 30px;
+					flex-shrink:0;
+
+					@include respond-to(540px) {
+						flex-direction:column;
+					}
+
+					@include respond-to($mobile) {
+						width:100%;
+						align-items:center;
+						gap:20px;
+					}
+
+					#footer-logo-link {
+						img {
+							width:145px;
+							flex-shrink:1;
+							flex-grow:0;
+	
+							@include respond-to($mobile) {
+								width:60%;
+							}
+						}
+					}
+					
 
 					#contact-information {
 						display: flex;
 						flex-direction: column;
-						gap: 10px;
+						gap: 20px;
+						flex-shrink:0;
+						flex-grow:1;
+
+						@include respond-to(540px) {
+							align-items:flex-end;
+							text-align:right;
+						}
+
+						@include respond-to($mobile) {
+							align-items:center;
+							text-align:center;
+						}
+						
 						a {
 							font-family: $mont;
 							text-decoration: none;
 							color: $white;
 
 							i {
-								font-size: 20px;
+								font-size: 24px;
 								margin-right: 5px;
+
+								@include respond-to($mobile) {
+									font-size:28px;
+								}
 							}
 						}
 					}
@@ -73,13 +142,13 @@ footer {
 
 		#footer-bottom {
 			border-top: 1px solid #444;
-			padding: 20px;
 			#footer-bottom-content {
 				width: clamp($tablet, 70vw, 70vw);
 				margin: 0 auto;
 				display: flex;
 				justify-content: space-between;
 				font-size: 12px;
+				padding:20px;
 
 				@include respond-to($tablet) {
 					width: 100%;

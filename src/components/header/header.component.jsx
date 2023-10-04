@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined.svg";
+//import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined.svg";
+import Logo from "../../assets/Turn-Back-The-Block-Logo-Footer.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./header.styles.scss";

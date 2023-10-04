@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FooterLogo from "../../assets/Turn-Back-The-Block-Logo-Footer.png";
 import "./footer.styles.scss";
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
 				<section id="footer-section">
 					<div id="footer-container">
 						<div id="footer-top">
-							<div id="footer-right" className="footer-menu">
+							<div id="footer-left" className="footer-menu">
 								<div id="learn-more">
 									<h3>Learn More</h3>
 									<ul>
@@ -21,9 +22,13 @@ const Footer = () => {
 										<li>
 											<Link to="apply">Apply to Own</Link>
 										</li>
+										<li id="get-involved-mobile">
+											<Link to="get-involved">Get Involved</Link>
+										</li>
 										<li>
 											<Link to="media">Photos</Link>
 										</li>
+										
 									</ul>
 								</div>
 								<div id="get-involved" className="footer-menu">
@@ -41,8 +46,9 @@ const Footer = () => {
 									</ul>
 								</div>
 							</div>
-							<div id="footer-left">
-								<img src="logo" alt="logo" />
+							<div id="footer-right">
+							<Link to="/" id="footer-logo-link"><img src={FooterLogo} alt="logo" /></Link>
+								
 								<div id="contact-information">
 									<a
 										href="https://www.google.com/maps/place/1924+Battle+Row,+Augusta,+GA+30904/@33.482559,-81.9985294,17z"
@@ -52,7 +58,7 @@ const Footer = () => {
 										1924 Battle Row <br /> Augusta, GA 30904
 									</a>
 
-									<a href="tel:(706) 262-4000">(706) 262-4000</a>
+									<a id="footer-phone" href="tel:(706) 262-4000">(706) 262-4000</a>
 
 									<div id="footer-social-icons">
 										<a
@@ -60,14 +66,14 @@ const Footer = () => {
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											<i class="fa-brands fa-square-instagram"></i>
+											<i className="fa-brands fa-square-instagram"></i>
 										</a>
 										<a
 											href="https://www.facebook.com/TurnBacktheBlock/"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											<i class="fa-brands fa-square-facebook"></i>
+											<i className="fa-brands fa-square-facebook"></i>
 										</a>
 									</div>
 								</div>
