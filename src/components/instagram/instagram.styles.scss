@@ -7,10 +7,15 @@
 #instagram-section {
 	width: clamp(768px, 70vw, 70vw);
 	margin: 0 auto;
-	padding: 60px 20px;
+	padding: 80px 20px 90px 20px;
 
 	@include respond-to($tablet) {
 		width: 100%;
+		padding: 60px 20px;
+	}
+
+	@include respond-to($mobile) {
+		padding: 40px 20px;
 	}
 
 	#instagram-container {
@@ -26,11 +31,44 @@
 				flex-grow: 1;
 				flex-shrink: 0;
 				margin-right: 20px;
-
+				font-size: 20px;
+				font-size: 1.2vw;
+				font-size: clamp(18px, 1.2vw, 1.2vw);
 				a {
 					color: $red;
 					text-decoration: none;
 					font-weight: 600;
+				}
+			}
+		}
+
+		#instagram-feed {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			margin-top: 20px;
+
+			@include respond-to($tablet) {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+
+			.single-insta-post {
+				@include respond-to($tablet) {
+					&:nth-of-type(4),
+					&:nth-of-type(5) {
+						display: none;
+					}
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					object-fit: cover;
+					height: clamp(150px, 14vw, 14vw);
+
+					@include respond-to($tablet) {
+						height: 30vw;
+					}
 				}
 			}
 		}

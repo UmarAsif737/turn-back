@@ -19,7 +19,7 @@ footer {
 			}
 
 			@include respond-to($mobile) {
-				padding:40px 20px 30px 20px;
+				padding: 40px 20px 30px 20px;
 			}
 
 			#footer-top {
@@ -32,25 +32,25 @@ footer {
 					width: clamp(360px, 40%, 40%);
 
 					@include respond-to($mobile) {
-						display:none;
+						display: none;
 					}
-					
+
 					#learn-more {
 						@include respond-to($tablet) {
-							width:auto;
+							width: auto;
 						}
 						#get-involved-mobile {
-							display:none;
+							display: none;
 
 							@include respond-to($tablet) {
-								display:inline;
+								display: inline;
 							}
 						}
 					}
 
 					#get-involved {
 						@include respond-to($tablet) {
-							display:none;
+							display: none;
 						}
 					}
 				}
@@ -79,48 +79,50 @@ footer {
 					display: flex;
 					align-items: flex-start;
 					gap: 30px;
-					flex-shrink:0;
+					flex-shrink: 0;
 
 					@include respond-to(540px) {
-						flex-direction:column;
+						flex-direction: column;
 					}
 
 					@include respond-to($mobile) {
-						width:100%;
-						align-items:center;
-						gap:20px;
+						width: 100%;
+						align-items: center;
+						gap: 20px;
 					}
 
 					#footer-logo-link {
+						@include respond-to($mobile) {
+							width: 60%;
+						}
 						img {
-							width:145px;
-							flex-shrink:1;
-							flex-grow:0;
-	
+							width: 145px;
+							flex-shrink: 1;
+							flex-grow: 0;
+
 							@include respond-to($mobile) {
-								width:60%;
+								width: 100%;
 							}
 						}
 					}
-					
 
 					#contact-information {
 						display: flex;
 						flex-direction: column;
 						gap: 20px;
-						flex-shrink:0;
-						flex-grow:1;
+						flex-shrink: 0;
+						flex-grow: 1;
 
 						@include respond-to(540px) {
-							align-items:flex-end;
-							text-align:right;
+							align-items: flex-end;
+							text-align: right;
 						}
 
 						@include respond-to($mobile) {
-							align-items:center;
-							text-align:center;
+							align-items: center;
+							text-align: center;
 						}
-						
+
 						a {
 							font-family: $mont;
 							text-decoration: none;
@@ -131,7 +133,7 @@ footer {
 								margin-right: 5px;
 
 								@include respond-to($mobile) {
-									font-size:28px;
+									font-size: 28px;
 								}
 							}
 						}
@@ -148,7 +150,26 @@ footer {
 				display: flex;
 				justify-content: space-between;
 				font-size: 12px;
-				padding:20px;
+				padding: 20px;
+
+				#kruhu-logo {
+					display: flex;
+					align-items: center;
+					font-family: $mont;
+					font-size: 14px;
+					font-weight: 600;
+					text-decoration: none;
+					color: $white;
+
+					p {
+						margin-top: 3px;
+					}
+
+					img {
+						margin-left: clamp(6px, 0.3vw, 0.3vw);
+						width: clamp(20px, 1vw, 1vw);
+					}
+				}
 
 				@include respond-to($tablet) {
 					width: 100%;

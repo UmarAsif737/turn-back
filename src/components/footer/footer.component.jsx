@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FooterLogo from "../../assets/Turn-Back-The-Block-Logo-Footer.png";
+import TheKru from "../../assets/the-kru-icon.png";
 import "./footer.styles.scss";
 
 const Footer = () => {
@@ -28,7 +29,6 @@ const Footer = () => {
 										<li>
 											<Link to="media">Photos</Link>
 										</li>
-										
 									</ul>
 								</div>
 								<div id="get-involved" className="footer-menu">
@@ -47,8 +47,10 @@ const Footer = () => {
 								</div>
 							</div>
 							<div id="footer-right">
-							<Link to="/" id="footer-logo-link"><img src={FooterLogo} alt="logo" /></Link>
-								
+								<Link to="/" id="footer-logo-link">
+									<img src={FooterLogo} alt="logo" />
+								</Link>
+
 								<div id="contact-information">
 									<a
 										href="https://www.google.com/maps/place/1924+Battle+Row,+Augusta,+GA+30904/@33.482559,-81.9985294,17z"
@@ -58,7 +60,9 @@ const Footer = () => {
 										1924 Battle Row <br /> Augusta, GA 30904
 									</a>
 
-									<a id="footer-phone" href="tel:(706) 262-4000">(706) 262-4000</a>
+									<a id="footer-phone" href="tel:(706) 262-4000">
+										(706) 262-4000
+									</a>
 
 									<div id="footer-social-icons">
 										<a
@@ -83,11 +87,13 @@ const Footer = () => {
 					<div id="footer-bottom">
 						<div id="footer-bottom-content">
 							<a
-								href="https://thekru.rocks/"
+								href="https://kruhu.com/"
 								target="_blank"
 								rel="noopener noreferrer"
+								id="kruhu-logo"
 							>
-								<img src="kruhu" alt="Website built by The Kru" />
+								<p>built by </p>
+								<img src={TheKru} alt="Website built by The Kru" />
 							</a>
 
 							<p>Turn Back The Block is a 501c3 organization.</p>

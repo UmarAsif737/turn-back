@@ -2,20 +2,30 @@
 
 // Page-scoped globals //
 
-#about-impact, #about-history, #about-board {
-	width:100%;
-	margin-top:60px;
+#about-impact,
+#about-history,
+#about-board {
+	width: 100%;
+	margin-top: 60px;
+
+	@include respond-to(1100px) {
+		margin-top: 30px;
+	}
+
+	@include respond-to($mobile) {
+		margin-top: 0;
+	}
 
 	.container {
-		width:clamp($tablet, 70vw, 70vw);
-		margin:0 auto;
-		padding:20px;
-	
+		width: clamp($tablet, 70vw, 70vw);
+		margin: 0 auto;
+		padding: 20px;
+
 		@include respond-to($tablet) {
-			width:100%;
+			width: 100%;
 		}
 	}
-	
+
 	.subheading {
 		font-family: $mont;
 		font-size: clamp(14px, 0.8vw, 1vw);
@@ -23,7 +33,7 @@
 		color: $red;
 		text-transform: uppercase;
 	}
-	
+
 	.heading {
 		font-family: $mont;
 		font-size: clamp(26px, 2vw, 2vw);
@@ -36,13 +46,13 @@
 			font-weight: 700;
 		}
 	}
-	
+
 	p {
-		font-family:$mont;
+		font-family: $mont;
 		font-size: 16px;
 		color: $black;
 	}
-	
+
 	.link-container {
 		.link-icon {
 			color: $red;
@@ -53,7 +63,7 @@
 			color: $red;
 			text-underline-offset: 2px;
 			font-weight: 600;
-	
+
 			&:hover {
 				color: $black;
 			}
@@ -63,66 +73,114 @@
 // End Page-scoped globals //
 
 #about-impact {
+	@include respond-to($mobile) {
+		margin-top: 20px;
+	}
 	.container {
 		#heading-and-text {
-			display:flex;
+			display: flex;
 			justify-content: space-between;
+			gap: 20px;
+			width: 100%;
+
+			@include respond-to(650px) {
+				flex-direction: column;
+				gap: 10px;
+				justify-content: flex-start;
+			}
+
 			.heading-container {
-				width:100%;
+				width: 100%;
 			}
 			.text-container {
-				width:70%;
+				width: 70%;
+
+				@include respond-to(1200px) {
+					width: 80%;
+				}
+
+				@include respond-to(650px) {
+					width: 100%;
+				}
 
 				.subheading {
-					color:transparent;
+					// Literally just used for spacing, our little secret.
+					color: transparent;
+
+					@include respond-to(650px) {
+						display: none;
+					}
 				}
 				p {
-					font-size:20px;
-					font-weight:500;
+					font-size: 20px;
+					font-size: clamp(16px, 2vw, 20px);
+					font-size: clamp(14px, 1vw, 1vw);
+					font-weight: 500;
+
+					@include respond-to(650px) {
+						font-size: clamp(16px, 1vw, 1vw);
+					}
 				}
 			}
 		}
 
+		#stories-scroller {
+			@include respond-to($tablet) {
+				width: calc(100% + 20px);
+				overflow-x: scroll;
+			}
+		}
+
 		#stories-container {
-			display:grid;
+			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-			column-gap:30px;
-			margin-top:40px;
+			grid-template-rows: 1fr;
+			column-gap: clamp(20px, 2vw, 30px);
+			margin-top: 40px;
+			width: clamp(728px, 100%, 100%);
+			padding: 0 20px 20px 0;
+			//width: clamp(1100px, 100%, 100%);
 
 			.story {
-				display:flex;
-				flex-direction:column;
-				gap:10px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
 
 				img {
-					width:100%;
-					height:13vw;
-					object-fit:cover;
-					object-position:center center;
+					width: 100%;
+					height: 14vw;
+					object-fit: cover;
+					object-position: center center;
+
+					@include respond-to(1100px) {
+						height: 154px;
+					}
 				}
 
 				.numbered-title {
-					display:flex;
-					gap:8px;
-					margin-top:7px;
+					display: flex;
+					gap: 8px;
+					margin-top: 7px;
 
 					.number {
-						font-family:$intro;
-						font-size:36px;
-						color:$red;
-						line-height:1;
+						font-family: $intro;
+						font-size: 2vw;
+						font-size: clamp(16px, 2vw, 2vw);
+						color: $red;
+						line-height: 1;
 					}
 					h3 {
-						font-family:$intro;
-						font-size:20px;
-						color:$black;
-						line-height:1.2;
+						font-family: $intro;
+						font-size: 20px;
+						font-size: clamp(13px, 1.2vw, 1.2vw);
+						color: $black;
+						line-height: 1.2;
 					}
 				}
 
 				p {
-					font-size:14px;
-					font-weight:600;
+					font-size: clamp(12px, 1vw, 16px);
+					font-weight: 500;
 				}
 			}
 		}
@@ -130,59 +188,163 @@
 }
 
 #about-history {
+	#history-container {
+		// This is used for padding purposes
+		@include respond-to($mobile) {
+			padding: 20px 0;
+		}
+	}
 	.container {
+		.heading-container {
+			@include respond-to($mobile) {
+				padding: 0 20px;
+			}
+		}
 		#article-container {
-			display:flex;
-			gap:4vw;
-			margin-top:40px;
+			display: flex;
+			gap: 4vw;
+			margin-top: 40px;
+
+			@include respond-to(1100px) {
+				margin-top: 20px;
+			}
+
+			@include respond-to($tablet) {
+				flex-direction: column;
+			}
 
 			#main-one p {
-				margin-bottom:30px;
+				margin-bottom: 30px;
+
+				@include respond-to(1100px) {
+					margin-bottom: 20px;
+				}
 			}
 
 			article {
-				width:50%;
-			}
+				width: 50%;
 
-			#mission-container {
-				width:50%;
-
-				img {
-					display:block;
-					width:100%;
-					height:10vw;
-					object-fit:cover;
-					object-position:top center;
+				@include respond-to($tablet) {
+					width: 100%;
 				}
-				#our-mission {
-					background:$purple;
-					padding:20px 30px;
-					margin-bottom:30px;
-					#subheading-container {
-						display:flex;
-						align-items: center;
-						gap:10px;
-						margin-bottom:10px;
 
-						.subheading {
-							font-size:20px;
-							color:$white;
-							flex-shrink:0;
-							flex-grow:1;
-						}
-						.inline-line {
-							background:$white;
-						}
-					}
-					p {
-						font-weight:500;
-						color:$white;
-					}
-					
+				@include respond-to($mobile) {
+					padding: 0 20px;
 				}
 
 				.main-two {
-					margin-bottom:30px;
+					display: none;
+					@include respond-to($tablet) {
+						display: inline;
+					}
+				}
+
+				#accordion-button {
+					border: none;
+					background: 0;
+					padding: 4px 4px 4px 0;
+					text-transform: uppercase;
+					color: $black;
+					text-decoration: underline;
+					text-underline-offset: 2px;
+					font-family: $mont;
+					align-self: flex-start;
+					cursor: pointer;
+					display: none;
+					@include respond-to($mobile) {
+						display: block;
+					}
+				}
+
+				#read-more {
+					@include respond-to($mobile) {
+						display: block;
+						max-height: 0;
+						height: auto;
+						overflow: hidden;
+						transition: max-height 0.2s linear;
+						will-change: max-height;
+
+						&.open-accordion {
+							max-height: 9999px;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+
+			#mission-container {
+				width: 50%;
+
+				@include respond-to($tablet) {
+					width: 100%;
+					margin-top: 10px;
+				}
+
+				@include respond-to($mobile) {
+					width: 100%;
+					margin-top: 40px;
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					height: clamp(200px, 10vw, 10vw);
+					object-fit: cover;
+					object-position: top center;
+				}
+				#our-mission {
+					background: $purple;
+					padding: 20px 30px;
+					margin-bottom: 30px;
+
+					@include respond-to($mobile) {
+						padding: 30px 20px;
+						margin-bottom: 20px;
+					}
+
+					#subheading-container {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						margin-bottom: 10px;
+
+						@include respond-to($mobile) {
+							flex-direction: column;
+							align-items: flex-start;
+						}
+
+						.subheading {
+							font-size: 20px;
+							color: $white;
+							flex-shrink: 0;
+							flex-grow: 1;
+						}
+						.inline-line {
+							background: $white;
+
+							@include respond-to($mobile) {
+								display: block;
+								margin: 10px 0;
+							}
+						}
+					}
+					p {
+						font-weight: 500;
+						color: $white;
+					}
+				}
+
+				.main-two {
+					margin-bottom: 30px;
+
+					@include respond-to(1100px) {
+						margin-bottom: 20px;
+					}
+
+					@include respond-to($tablet) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -190,51 +352,78 @@
 }
 
 #about-board {
-	margin-bottom:100px;
+	margin-bottom: 100px;
+
+	@include respond-to($mobile) {
+		margin-bottom: 60px;
+	}
 	.container {
 		#board-container {
-			display:grid;
+			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-rows: auto;
-			column-gap:50px;
-			row-gap:100px;
-			margin-top:40px;
+			column-gap: 50px;
+			row-gap: 80px;
+			margin-top: 40px;
+
+			@include respond-to(1300px) {
+				column-gap: 30px;
+				row-gap: 60px;
+			}
+
+			@include respond-to($tablet) {
+				grid-template-columns: 1fr 1fr;
+				column-gap: 20px;
+			}
+
+			@include respond-to($mobile) {
+				grid-template-columns: 1fr;
+				row-gap: 70px;
+			}
 
 			#board-member {
-
 				img {
-					display:block;
-					width:100%;
-					height:25vw;
-					object-fit:cover;
+					display: block;
+					width: 100%;
+					height: 25vw;
+					height: clamp(275px, 25vw, 25vw);
+					object-fit: cover;
 					object-position: center center;
 
+					@include respond-to($tablet) {
+						height: 50vw;
+					}
+
+					@include respond-to($mobile) {
+						height: 100vw;
+					}
 				}
 
 				h3 {
-					font-family:$intro;
-					margin:10px 0 5px 0;
-					color:$black;
+					font-family: $intro;
+					margin: 10px 0 5px 0;
+					color: $black;
 				}
 				span {
-					display:block;
-					font-family:$mont;
-					font-size:14px;
-					font-weight:600;
-					color:$black;
+					display: block;
+					font-family: $mont;
+					font-size: 14px;
+					font-weight: 600;
+					color: $black;
 				}
 
 				.bordered {
-					border-left-width:4px;
-					border-left-color:$brown;
+					border-left-width: 4px;
+					border-left-color: $brown;
 					border-left-style: solid;
-					padding-left:10px;
-					margin-top:20px;
+					padding-left: 10px;
+					margin-top: 20px;
 					p {
-						
+						@include respond-to($tablet) {
+							font-size: 14px;
+						}
 					}
 				}
-				
 			}
 		}
 	}
