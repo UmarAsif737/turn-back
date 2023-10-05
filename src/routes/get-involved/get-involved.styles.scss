@@ -1,0 +1,358 @@
+@import "../../_global.styles";
+
+#get-involved-section {
+	width: 100%;
+	margin: 60px 0;
+
+	@include respond-to(1100px) {
+		margin: 30px 0;
+	}
+
+	@include respond-to($tablet) {
+		margin-bottom: 0;
+	}
+
+	@include respond-to($mobile) {
+		margin: 0;
+	}
+	.container {
+		width: clamp($tablet, 70vw, 70vw);
+		margin: 0 auto;
+		padding: 20px;
+
+		@include respond-to($tablet) {
+			width: 100%;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	#help-us {
+		@include respond-to($mobile) {
+			padding: 0;
+		}
+		#call-to-action {
+			position: relative;
+			padding: 60px 40px;
+			background: $brown;
+			@include respond-to($mobile) {
+				padding: 0;
+			}
+			#background-image {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: $purple;
+				z-index: 1;
+
+				@include respond-to($mobile) {
+					position: relative;
+					height: 200px;
+				}
+			}
+			#donate-today {
+				position: relative;
+				z-index: 3;
+				@include respond-to($mobile) {
+					padding: 30px 40px;
+				}
+				h2 {
+					font-family: $intro;
+					text-transform: uppercase;
+					font-size: 1.8vw;
+					font-size: clamp(32px, 1.8vw, 1.8vw);
+
+					@include respond-to(360px) {
+						font-size: 26px;
+					}
+				}
+
+				.link-container {
+					margin-top: 20px;
+					.link-icon {
+						color: $white;
+						font-size: 12px;
+						margin-right: 5px;
+					}
+					a {
+						color: $white;
+						text-underline-offset: 2px;
+						font-weight: 600;
+
+						&:hover {
+							color: $dark-gray;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#volunteer {
+		@include respond-to($tablet) {
+			padding: 20px 0 0 0;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			padding: 20px;
+			display: none;
+
+			@include respond-to($tablet) {
+				display: block;
+			}
+		}
+		#heading-container {
+			display: flex;
+			align-items: center;
+			gap: clamp(10px, 1vw, 20px);
+			margin: 40px 0;
+
+			@include respond-to($tablet) {
+				margin: 30px 0 10px 0;
+				padding: 0 20px;
+
+				.inline-line {
+					display: none;
+				}
+			}
+			h2 {
+				font-family: $mont;
+				font-size: clamp(26px, 2vw, 2vw);
+				font-weight: 600;
+				color: $black;
+				flex-shrink: 0;
+				flex-grow: 1;
+			}
+			.inline-line {
+				flex-shrink: 1;
+				flex-grow: 0;
+			}
+		}
+		#content-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4vw;
+
+			@include respond-to($tablet) {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+
+			#image-and-schedule {
+				@include respond-to($tablet) {
+					background: $dark-gray;
+					padding: 40px 20px;
+				}
+				img {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+					margin-bottom: 40px;
+					padding: 0;
+					display: block;
+
+					@include respond-to($tablet) {
+						display: none;
+					}
+				}
+				#schedule-container {
+					h3 {
+						font-family: $intro;
+						font-size: clamp(26px, 1.1vw, 1.1vw);
+						color: $black;
+						margin-bottom: 20px;
+					}
+					#schedule {
+						display: grid;
+						grid-template-columns: auto 1fr;
+						gap: clamp(20px, 1.5vw, 1.5vw);
+
+						p {
+							color: $black;
+
+							span {
+								color: $black;
+								font-weight: 600;
+								text-decoration: underline;
+							}
+
+							&.event {
+								span {
+									@include respond-to($mobile) {
+										display: block;
+									}
+									&:last-of-type {
+										font-weight: 400;
+										text-decoration: none;
+
+										@include respond-to($mobile) {
+											display: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			#form-container {
+				@include respond-to($tablet) {
+					padding: 0 20px;
+				}
+				p {
+					color: $black;
+				}
+				form {
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr 1fr;
+					column-gap: 15px;
+					row-gap: 25px;
+					margin: 30px 0;
+
+					@include respond-to($tablet) {
+						margin: 40px 0;
+					}
+
+					@include respond-to($mobile) {
+						display: flex;
+						flex-direction: column;
+					}
+
+					#referral {
+						grid-column: 1 / 5;
+
+						@include respond-to($mobile) {
+							grid-column: 1;
+						}
+					}
+
+					label {
+						font-family: $mont;
+						font-size: clamp(14px, 0.7vw, 0.7vw);
+						text-transform: uppercase;
+						font-weight: 600;
+						color: $black;
+
+						.required {
+							color: $red;
+							margin-left: 3px;
+						}
+
+						input,
+						select {
+							display: block;
+							width: 100%;
+							margin-top: 5px;
+							padding: 5px;
+							color: $black;
+							border: 2px solid $dark-gray;
+							background: $light-gray;
+						}
+
+						&:nth-of-type(1) {
+							grid-column: 1 / 5;
+						}
+
+						&:nth-of-type(2) {
+							grid-column: 1 / 5;
+						}
+
+						&:nth-of-type(3) {
+							grid-column: 1 / 5;
+						}
+
+						&:nth-of-type(4) {
+							grid-column: 1 / 3;
+						}
+
+						&:nth-of-type(5) {
+							grid-column: 3 / 4;
+						}
+
+						&:nth-of-type(6) {
+							grid-column: 4 / 5;
+						}
+
+						&:nth-of-type(7) {
+							grid-column: 1 / 3;
+						}
+
+						&:nth-of-type(8) {
+							grid-column: 3 / 5;
+						}
+
+						&:nth-of-type(9) {
+							grid-column: 1 / 5;
+						}
+					}
+
+					.checkbox-container {
+						display: grid;
+						grid-template-columns: auto 1fr;
+						grid-template-rows: 1fr;
+						grid-column: 1 / 5;
+						column-gap: 15px;
+						align-items: center;
+
+						input {
+							position: relative;
+							width: 30px;
+							height: 30px;
+							border: 2px solid $dark-gray;
+							background: $light-gray;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							appearance: none;
+
+							&:checked {
+								&::after {
+									content: "";
+									position: absolute;
+									background-color: $red;
+									mask-image: url("../../assets/check-sharp-solid.svg");
+									mask-size: cover;
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
+
+						input,
+						label {
+							a {
+								color: $black;
+							}
+							&:nth-of-type(1) {
+								grid-column: auto;
+							}
+
+							&:nth-of-type(2) {
+								grid-column: auto;
+							}
+						}
+					}
+
+					input[type="submit"] {
+						width: 100%;
+						grid-column: 1 / 3;
+						margin-top: 20px;
+						padding: 15px 0;
+						font-size: clamp(16px, 1vw, 20px);
+
+						@include respond-to(1500px) {
+							grid-column: 1 / 4;
+						}
+
+						@include respond-to($tablet) {
+							grid-column: 1 / 5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
