@@ -50,6 +50,8 @@ const About = () => {
 		}
 	};
 
+	// change document.gets to useRefs
+
 	return (
 		<>
 			<section id="about-impact">
