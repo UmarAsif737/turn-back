@@ -29,6 +29,14 @@ const Header = () => {
 			}
 		}
 	};
+	const handleCloseMenu = () => {
+		setMenuOpen(false);
+		if (window.innerWidth <= 768) {
+			const navElement = document.getElementById("nav");
+			navElement.classList.remove("open");
+			document.body.style.overflow = "auto";
+		}
+	};
 
 	return (
 		<>
@@ -39,11 +47,15 @@ const Header = () => {
 					</Link>
 					<div id="mobile-menu-container">
 						<div id="mobile-sub-menu">
-							<Link to="donate" id="mobile-donate">
+							<Link to="donate" id="mobile-donate" onClick={handleCloseMenu}>
 								Donate
 							</Link>
 
-							<Link to="volunteer" id="mobile-volunteer">
+							<Link
+								to="volunteer"
+								id="mobile-volunteer"
+								onClick={handleCloseMenu}
+							>
 								Volunteer
 							</Link>
 						</div>
@@ -63,27 +75,47 @@ const Header = () => {
 						<ul id="main-menu">
 							<ul id="main-menu-items">
 								<li>
-									<Link to="about" className={getLink("/about")}>
+									<Link
+										to="about"
+										className={getLink("/about")}
+										onClick={handleCloseMenu}
+									>
 										About
 									</Link>
 								</li>
 								<li>
-									<Link to="projects" className={getLink("/projects")}>
+									<Link
+										to="projects"
+										className={getLink("/projects")}
+										onClick={handleCloseMenu}
+									>
 										Projects
 									</Link>
 								</li>
 								<li>
-									<Link to="apply" className={getLink("/apply")}>
+									<Link
+										to="apply"
+										className={getLink("/apply")}
+										onClick={handleCloseMenu}
+									>
 										Apply To Own
 									</Link>
 								</li>
 								<li>
-									<Link to="get-involved" className={getLink("/get-involved")}>
+									<Link
+										to="get-involved"
+										className={getLink("/get-involved")}
+										onClick={handleCloseMenu}
+									>
 										Get Involved
 									</Link>
 								</li>
 								<li>
-									<Link to="media" className={getLink("/media")}>
+									<Link
+										to="media"
+										className={getLink("/media")}
+										onClick={handleCloseMenu}
+									>
 										Media
 									</Link>
 								</li>
