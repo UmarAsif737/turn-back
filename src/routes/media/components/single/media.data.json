@@ -1,8 +1,42 @@
 [
-    {
-        "title": "2022 Block Party",
-        "date": "November 2022",
-        "folder": "November 2022 Block Party"
-    }
-    
+	{
+		"title": "2021 City Serve",
+		"date": "2021",
+		"folder": "2021 City Serve"
+	},
+	{
+		"title": "December 2022 Block Party",
+		"date": "December 2022",
+		"folder": "December 2022 Block Party"
+	},
+	{
+		"title": "February 2021 Block Party",
+		"date": "February 2021",
+		"folder": "February 2021 Block Party"
+	},
+	{
+		"title": "Halloween 2021",
+		"date": "October 2021",
+		"folder": "Halloween 2021"
+	},
+	{
+		"title": "Halloween 2022",
+		"date": "October 2022",
+		"folder": "Halloween 2022"
+	},
+	{
+		"title": "March 2022 Block Party",
+		"date": "March 2022",
+		"folder": "March 2022 Block Party"
+	},
+	{
+		"title": "May 2021 Block Party",
+		"date": "May 2021",
+		"folder": "May 2021 Block Party"
+	},
+	{
+		"title": "November 2022 Block Party",
+		"date": "November 2022",
+		"folder": "November 2022 Block Party"
+	}
 ]
