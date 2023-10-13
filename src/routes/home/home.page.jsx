@@ -5,7 +5,7 @@ import CTA from "../../components/cta/cta.component";
 import whoImg from "./images/who-we-are.jpg";
 import eventImg from "./images/our-events.jpg";
 import LadonnaImg from "./images/LaDonna-Doleman.jpg";
-import LadonnaVideo from "./images/Turn Back The Block - Ladonna.mp4";
+// import LadonnaVideo from "./images/Turn Back The Block - Ladonna.mp4";
 import "./home.styles.scss";
 
 const Home = () => {
@@ -161,7 +161,10 @@ const Home = () => {
           </div>
           <div className="right-content">
             <video controls poster={LadonnaImg}>
-              <source src={LadonnaVideo} type="video/mp4" />
+              <source
+                src="/Turn Back The Block - LaDonna.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </div>
