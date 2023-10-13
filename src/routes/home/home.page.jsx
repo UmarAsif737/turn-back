@@ -2,9 +2,10 @@ import Splash from "./components/splash.component";
 import Map from "../../components/map/map.component";
 import Instagram from "../../components/instagram/instagram.component";
 import CTA from "../../components/cta/cta.component";
-import whoImg from "../../assets/who-we-are.jpg";
-import LadonnaImg from "../../assets/LaDonna-Doleman.jpg";
-import LadonnaVideo from "../../assets/Turn Back The Block - Ladonna.mp4";
+import whoImg from "./images/who-we-are.jpg";
+import eventImg from "./images/our-events.jpg";
+import LadonnaImg from "./images/LaDonna-Doleman.jpg";
+import LadonnaVideo from "./images/Turn Back The Block - Ladonna.mp4";
 import "./home.styles.scss";
 
 const Home = () => {
@@ -45,7 +46,7 @@ const Home = () => {
             </div>
           </div>
           <div className="right-content">
-            <img src={whoImg} alt="" />
+            <img src={whoImg} alt={whoImg} />
           </div>
         </div>
       </section>
@@ -86,7 +87,7 @@ const Home = () => {
       <section className="home-section events">
         <div className="container">
           <div className="left-content">
-            <img src={whoImg} alt="" />
+            <img src={eventImg} alt={eventImg} />
           </div>
           <div className="right-content">
             <div className="heading-container">
