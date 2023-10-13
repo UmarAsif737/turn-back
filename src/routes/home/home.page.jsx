@@ -5,7 +5,6 @@ import CTA from "../../components/cta/cta.component";
 import whoImg from "./images/who-we-are.jpg";
 import eventImg from "./images/our-events.jpg";
 import LadonnaImg from "./images/LaDonna-Doleman.jpg";
-// import LadonnaVideo from "./images/Turn Back The Block - Ladonna.mp4";
 import "./home.styles.scss";
 
 const Home = () => {
