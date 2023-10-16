@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .env
+src/components/map/locations/images
+src/components/map/locations/plats
 src/routes/media/components/images
 
 # Editor directories and files

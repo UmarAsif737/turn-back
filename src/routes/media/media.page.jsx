@@ -7,7 +7,7 @@ import "./media.styles.scss";
 const Media = () => {
 	// image path
 	const mediaImagePath = "src/routes/media/components/single/images/";
-	const staticImagePath = "./images/";
+	const staticImagePath = "./media-page-images/";
 	// Loop through each folder and its images to require them
 	// Object.keys(mediaImageMap).forEach((folder) => {
 	// 	mediaImageMap[folder].forEach((image) => {
