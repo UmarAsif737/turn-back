@@ -116,6 +116,10 @@
 .impact {
 	position: relative;
 	background: $dark-gray;
+	background: linear-gradient(45deg, transparent, #e4e4e4, transparent),
+		url("./images/gray-tiles.png");
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
 
 	@include respond-to($tablet) {
 		padding-bottom: 10vw;
@@ -273,10 +277,11 @@
 			rgba(169, 172, 205, 0.8),
 			rgba(169, 172, 205, 0.8)
 		),
+		url("./images/paper-texture.png"),
 		url("./components/images/splash (15).jpg");
-	background-position: center center, center center;
-	background-repeat: no-repeat, no-repeat;
-	background-size: cover, cover;
+	background-position: center center, center center, center center;
+	background-repeat: no-repeat, repeat, no-repeat;
+	background-size: cover, contain, cover;
 
 	.container {
 		position: relative;

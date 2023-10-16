@@ -7,10 +7,9 @@
 	height: clamp(330px, 30vw, 30vw);
 	display: flex;
 	justify-content: center;
-	background: url("/home-splash-images/red-mosaic.png");
+	background: url("/home-splash-images/red-mosaic.png"), $red;
 	background-size: contain;
 	background-repeat: repeat;
-	background: $red;
 	overflow: hidden;
 
 	#splash-background-mobile {
