@@ -27,3 +27,15 @@ This project uses the `google-maps-react-markers` library.
 See: https://github.com/giorgiabosello/google-maps-react-markers
 
 # More
+
+# form validation and processing
+
+# server env files
+
+# instagram token refresh script
+
+# error handling
+
+# menu close when clicked outside of
+
+# make the numbers go woah woehwo

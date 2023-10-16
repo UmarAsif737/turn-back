@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import "./cta.styles.scss";
 
 const CTA = () => {
+	const donateLink =
+		"https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NESTQKKMSGQHA";
 	return (
 		<>
 			<section id="cta-section">
@@ -9,8 +12,17 @@ const CTA = () => {
 						Help Us Turn <br className="mobile-breaker" /> Back the Block
 					</h2>
 					<div id="cta-buttons">
-						<a className="button white">Donate Today</a>
-						<a className="button transparent">Volunteer With Us</a>
+						<a
+							href={donateLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="button white"
+						>
+							Donate Today
+						</a>
+						<Link to="../get-involved" className="button transparent">
+							Volunteer With Us
+						</Link>
 					</div>
 				</div>
 			</section>

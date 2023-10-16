@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import OurMission from "../../assets/our-mission.jpg";
 import "./get-involved.styles.scss";
 
 const GetInvolved = () => {
-	const [heard, setHeard] = useState("");
+	// Donation link
+	const donateLink =
+		"https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NESTQKKMSGQHA";
 
+	const [heard, setHeard] = useState("");
 	const handleInputChange = (e) => {
 		setHeard(e.target.value);
 	};
@@ -18,7 +21,9 @@ const GetInvolved = () => {
 							<h2>Help Us Turn Back the Block</h2>
 							<div className="link-container">
 								<i className="fa-regular fa-arrow-right link-icon"></i>
-								<a href="#">Donate Today</a>
+								<a href={donateLink} target="_blank" rel="noopener noreferrer">
+									Donate Today
+								</a>
 							</div>
 						</div>
 					</div>

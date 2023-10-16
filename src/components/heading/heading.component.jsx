@@ -22,7 +22,7 @@ const Heading = () => {
 	}
 
 	return (
-		<section className="page-heading-container">
+		<section className="page-heading-container get-scrolled-kid">
 			<div className="page-heading">
 				<h1>{title}</h1>
 			</div>

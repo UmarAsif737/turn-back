@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./splash.styles.scss";
 
 const Splash = () => {
@@ -47,7 +48,7 @@ const Splash = () => {
 
 	return (
 		<>
-			<main id="splash-container">
+			<main id="splash-container" className="get-scrolled-kid">
 				<div id="splash-background-mobile">
 					<div id="first-copy-mobile">
 						<div id="image-one-mobile" className="bg-image center"></div>
@@ -72,10 +73,12 @@ const Splash = () => {
 							stood.
 						</p>
 						<div id="splash-button-container">
-							<a href="#" className="button white">
+							<Link to="get-involved" className="button white">
 								View Our Projects
-							</a>
-							<button className="button red">Learn More</button>
+							</Link>
+							<Link to="about" className="button red">
+								Learn More
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -100,11 +103,11 @@ const Splash = () => {
 							<div id="right-image-five" className="bg-image right"></div>
 						</div>
 						<div id="second-copy-right" className="second-copy">
-							<div id="right-image-one" className="bg-image right"></div>
-							<div id="right-image-two" className="bg-image right"></div>
-							<div id="right-image-three" className="bg-image right"></div>
-							<div id="right-image-four" className="bg-image right"></div>
-							<div id="right-image-five" className="bg-image right"></div>
+							<div id="right-image-six" className="bg-image right"></div>
+							<div id="right-image-seven" className="bg-image right"></div>
+							<div id="right-image-eight" className="bg-image right"></div>
+							<div id="right-image-nine" className="bg-image right"></div>
+							<div id="right-image-ten" className="bg-image right"></div>
 						</div>
 					</div>
 				</div>

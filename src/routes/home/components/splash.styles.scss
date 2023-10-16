@@ -2,339 +2,373 @@
 @import "../../../_global.styles";
 
 #splash-container {
-  position: relative;
-  width: 100%;
-  height: clamp(330px, 30vw, 30vw);
-  display: flex;
-  justify-content: center;
-  background: $red;
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: clamp(330px, 30vw, 30vw);
+	display: flex;
+	justify-content: center;
+	background-color: $red;
+	//background-image: url("../../../assets//tiles.png");
+	overflow: hidden;
 
-  #splash-background-mobile {
-    display: none;
-    position: relative;
-    height: calc(50vw + 20px);
-    width: 100%;
+	#splash-background-mobile {
+		display: none;
+		position: relative;
+		height: calc(50vw + 20px);
+		width: 100%;
 
-    #first-copy-mobile,
-    #second-copy-mobile {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      width: 100%;
-      height: 100%;
+		#first-copy-mobile,
+		#second-copy-mobile {
+			position: absolute;
+			top: 20px;
+			left: 0;
+			width: 100%;
+			height: 100%;
 
-      .bg-image.center {
-        position: absolute;
-        border: 4px solid $white;
-        max-height: 50vw;
-      }
+			.bg-image.center {
+				position: absolute;
+				border: 4px solid $white;
+				max-height: 50vw;
+			}
 
-      #image-one-mobile,
-      #image-four-mobile {
-        width: 60vw;
-        height: 45vw;
-        top: 10%;
-        left: 0;
-        background-image: url("./images/splash (7).jpg");
-        background-position: center center;
-        background-size: cover;
-      }
+			#image-one-mobile,
+			#image-four-mobile {
+				width: 60vw;
+				height: 45vw;
+				top: 10%;
+				left: 0;
+				background-image: url("./images/splash (1).jpg");
+				background-position: center center;
+				background-size: cover;
+			}
 
-      #image-two-mobile,
-      #image-five-mobile {
-        width: 32vw;
-        height: 32vw;
-        bottom: 0;
-        left: 40%;
-        background-image: url("./images/splash (2).jpg");
-        background-position: center center;
-        background-size: cover;
-      }
+			#image-two-mobile,
+			#image-five-mobile {
+				width: 32vw;
+				height: 32vw;
+				bottom: 0;
+				left: 40%;
+				background-image: url("./images/splash (2).jpg");
+				background-position: center center;
+				background-size: cover;
+			}
 
-      #image-three-mobile,
-      #image-six-mobile {
-        width: 50vw;
-        height: 40vw;
-        top: 0;
-        left: 55%;
-        background-image: url("./images/splash (3).jpg");
-        background-position: center center;
-        background-size: cover;
-      }
-    }
+			#image-three-mobile,
+			#image-six-mobile {
+				width: 50vw;
+				height: 40vw;
+				top: 0;
+				left: 55%;
+				background-image: url("./images/splash (3).jpg");
+				background-position: center center;
+				background-size: cover;
+			}
 
-    @include respond-to(540px) {
-      display: block;
-    }
-  }
+			#image-four-mobile {
+				background-image: url("./images/splash (4).jpg");
+			}
+			#image-five-mobile {
+				background-image: url("./images/splash (5).jpg");
+			}
+			#image-six-mobile {
+				background-image: url("./images/splash (6).jpg");
+			}
+		}
 
-  #splash {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: clamp(768px, 70%, 70%);
-    padding: 2rem 20px 0 20px;
-    z-index: 2;
+		@include respond-to(540px) {
+			display: block;
+		}
+	}
 
-    #splash-content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: auto;
-      min-width: 460px;
-      max-width: 55%; // Used in #right-container
+	#splash {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: clamp(768px, 70%, 70%);
+		padding: 2rem 20px 0 20px;
+		z-index: 2;
 
-      h1 {
-        font-family: "Intro", Arial, sans-serif;
-        font-size: clamp(32px, 2.5vw, 2.5vw);
-        line-height: 1;
-        color: $white;
-      }
+		#splash-content {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: auto;
+			min-width: 460px;
+			max-width: 55%; // Used in #right-container
 
-      p {
-        line-height: 1.8;
-      }
+			h1 {
+				font-family: "Intro", Arial, sans-serif;
+				font-size: clamp(32px, 2.5vw, 2.5vw);
+				line-height: 1;
+				color: $white;
+			}
 
-      #splash-button-container {
-        display: flex;
-        gap: 1.5vw;
-        margin-top: 20px;
+			p {
+				line-height: 1.8;
+			}
 
-        .button.red {
-          background-color: transparent;
-        }
-      }
+			#splash-button-container {
+				display: flex;
+				gap: 1.5vw;
+				margin-top: 20px;
 
-      @include respond-to($tablet) {
-        max-width: 65%;
-        min-width: 350px;
+				.button.red {
+					background-color: transparent;
+				}
+			}
 
-        #splash-button-container {
-          width: clamp(330px, 60%, 60%);
+			@include respond-to($tablet) {
+				max-width: 65%;
+				min-width: 350px;
 
-          .button {
-            padding: 1.5vw 0;
-          }
-        }
+				#splash-button-container {
+					width: clamp(330px, 60%, 60%);
 
-        h1 {
-          line-height: 1.2;
-          //font-size: 4.9vw;
-          font-size: clamp(24px, 4.2vw, 4.2vw);
-        }
-      }
+					.button {
+						padding: 1.5vw 0;
+					}
+				}
 
-      @include respond-to(540px) {
-        max-width: none;
-        min-width: 0;
-        padding-top: 20px;
+				h1 {
+					line-height: 1.2;
+					//font-size: 4.9vw;
+					font-size: clamp(24px, 4.2vw, 4.2vw);
+				}
+			}
 
-        #splash-button-container {
-          //width: clamp(392px, 80%, 80%);
-          width: 100%;
-          flex-direction: column;
+			@include respond-to(540px) {
+				max-width: none;
+				min-width: 0;
+				padding-top: 20px;
 
-          .button {
-            width: 100%;
-          }
-        }
+				#splash-button-container {
+					//width: clamp(392px, 80%, 80%);
+					width: 100%;
+					flex-direction: column;
 
-        h1 {
-          line-height: 1.2;
-          font-size: 6vw;
-        }
-      }
+					.button {
+						width: 100%;
+					}
+				}
 
-      @include respond-to($mobile) {
-        #splash-button-container {
-          gap: 15px;
+				h1 {
+					line-height: 1.2;
+					font-size: 6vw;
+				}
+			}
 
-          .button {
-            padding: 3vw;
-            font-size: 4vw;
-          }
-        }
-        h1 {
-          font-size: 8vw;
-          .break {
-            display: none;
-          }
-        }
-      }
-    }
+			@include respond-to($mobile) {
+				#splash-button-container {
+					gap: 15px;
 
-    @include respond-to($tablet) {
-      width: clamp(540px, 100%, 100%);
-      padding: 2rem 20px 2rem 20px;
-    }
+					.button {
+						padding: 3vw;
+						font-size: 4vw;
+					}
+				}
+				h1 {
+					font-size: 8vw;
+					.break {
+						display: none;
+					}
+				}
+			}
+		}
 
-    @include respond-to(540px) {
-      width: 100%;
-      padding: 2rem 20px 2rem 20px;
-    }
+		@include respond-to($tablet) {
+			width: clamp(540px, 100%, 100%);
+			padding: 2rem 20px 2rem 20px;
+		}
 
-    @include respond-to($mobile) {
-      width: 100%;
-      padding: 2rem 40px 2rem 40px;
-    }
+		@include respond-to(540px) {
+			width: 100%;
+			padding: 2rem 20px 2rem 20px;
+		}
 
-    @include respond-to(340px) {
-      width: 100%;
-      padding: 2rem 20px 2rem 20px;
-    }
-  }
+		@include respond-to($mobile) {
+			width: 100%;
+			padding: 2rem 40px 2rem 40px;
+		}
 
-  #splash-background-desktop {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-    grid-template-columns:
-      minmax(auto, 15%) minmax(500px, 40%)
-      minmax(auto, 50%);
-    width: 100%;
-    min-width: 1100px;
-    height: 100%;
-    z-index: 1;
+		@include respond-to(340px) {
+			width: 100%;
+			padding: 2rem 20px 2rem 20px;
+		}
+	}
 
-    #center-container {
-      position: relative;
-      grid-column: 2 / 3;
-    }
+	#splash-background-desktop {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		display: grid;
+		grid-template-columns:
+			minmax(auto, 15%) minmax(500px, 40%)
+			minmax(auto, 50%);
+		width: 100%;
+		min-width: 1100px;
+		height: 100%;
+		z-index: 1;
 
-    #left-container {
-      position: relative;
-      grid-column: 1 / 2;
-      overflow: hidden;
+		#center-container {
+			position: relative;
+			grid-column: 2 / 3;
+		}
 
-      #first-copy-left,
-      #second-copy-left {
-        position: absolute;
-        height: 100%;
-        width: 100%;
+		#left-container {
+			position: relative;
+			grid-column: 1 / 2;
+			overflow: hidden;
 
-        .bg-image.left {
-          position: absolute;
-          left: -40px;
-          border: 4px solid $white;
-        }
+			#first-copy-left,
+			#second-copy-left {
+				position: absolute;
+				height: 100%;
+				width: 100%;
 
-        #left-image-one {
-          bottom: 0; // handled by jsx
-          width: 100%;
-          height: 50%;
-          background-image: url("./images/splash (1).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				.bg-image.left {
+					position: absolute;
+					left: -40px;
+					border: 4px solid $white;
+				}
 
-        #left-image-two {
-          bottom: 40%; // handled by jsx
-          width: 80%;
-          height: 40%;
-          background-image: url("./images/splash (2).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				#left-image-one {
+					bottom: 0; // handled by jsx
+					width: 100%;
+					height: 50%;
+					background-image: url("./images/splash (1).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-        #left-image-three {
-          bottom: 0; // handled by jsx
-          width: 100%;
-          height: 50%;
-          background-image: url("./images/splash (3).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				#left-image-two {
+					bottom: 40%; // handled by jsx
+					width: 80%;
+					height: 40%;
+					background-image: url("./images/splash (2).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-        #left-image-four {
-          bottom: 40%; // handled by jsx
-          width: 80%;
-          height: 40%;
-          background-image: url("./images/splash (4).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
-      }
-    }
+				#left-image-three {
+					bottom: 0; // handled by jsx
+					width: 100%;
+					height: 50%;
+					background-image: url("./images/splash (3).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-    #right-container {
-      position: relative;
-      grid-column: 3 / 4;
-      overflow: hidden;
+				#left-image-four {
+					bottom: 40%; // handled by jsx
+					width: 80%;
+					height: 40%;
+					background-image: url("./images/splash (4).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
+			}
+		}
 
-      #first-copy-right,
-      #second-copy-right {
-        position: absolute;
-        height: 100%;
-        width: 100%;
+		#right-container {
+			position: relative;
+			grid-column: 3 / 4;
+			overflow: hidden;
+			background-image: url("../../../assets/map.png");
+			background-size: contain;
 
-        .bg-image.right {
-          position: absolute;
-          border: 4px solid $white;
-        }
+			#first-copy-right,
+			#second-copy-right {
+				position: absolute;
+				height: 100%;
+				width: 100%;
 
-        #right-image-one {
-          top: 0;
-          left: 49%;
-          width: clamp(100px, 10vw, 10vw);
-          height: clamp(100px, 10vw, 10vw);
-          background-image: url("./images/splash (5).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				.bg-image.right {
+					position: absolute;
+					border: 4px solid $white;
+				}
 
-        #right-image-two {
-          top: 18%;
-          left: 10%;
-          width: 15vw;
-          width: clamp(115px, 15vw, 15vw);
-          height: clamp(115px, 15vw, 15vw);
-          background-image: url("./images/splash (6).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				#right-image-one,
+				#right-image-six {
+					top: 0;
+					left: 49%;
+					width: clamp(100px, 10vw, 10vw);
+					height: clamp(100px, 10vw, 10vw);
+					background-image: url("./images/splash (5).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-        #right-image-three {
-          top: 42%;
-          left: 26%;
-          width: clamp(190px, 25vw, 25vw);
-          height: clamp(115px, 15vw, 15vw);
-          background-image: url("./images/splash (7).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				#right-image-two,
+				#right-image-seven {
+					top: 18%;
+					left: 10%;
+					width: 15vw;
+					width: clamp(115px, 15vw, 15vw);
+					height: clamp(115px, 15vw, 15vw);
+					background-image: url("./images/splash (15).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-        #right-image-four {
-          top: 74%;
-          left: 4%;
-          width: clamp(80px, 8vw, 8vw);
-          height: clamp(80px, 8vw, 8vw);
-          background-image: url("./images/splash (8).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
+				#right-image-three,
+				#right-image-eight {
+					top: 42%;
+					left: 26%;
+					width: clamp(190px, 25vw, 25vw);
+					height: clamp(115px, 15vw, 15vw);
+					background-image: url("./images/splash (7).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-        #right-image-five {
-          top: 50%;
-          left: 89%;
-          width: 8vw;
-          height: 8vw;
-          background-image: url("./images/splash (9).jpg");
-          background-position: center center;
-          background-size: cover;
-        }
-      }
-    }
+				#right-image-four,
+				#right-image-nine {
+					top: 74%;
+					left: 4%;
+					width: clamp(80px, 8vw, 8vw);
+					height: clamp(80px, 8vw, 8vw);
+					background-image: url("./images/splash (8).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-    @include respond-to(540px) {
-      display: none;
-    }
-  }
+				#right-image-five,
+				#right-image-ten {
+					top: 50%;
+					left: 89%;
+					width: 8vw;
+					height: 8vw;
+					background-image: url("./images/splash (9).jpg");
+					background-position: center center;
+					background-size: cover;
+				}
 
-  @include respond-to($tablet) {
-    height: auto;
-    flex-direction: column;
-  }
+				#right-image-six {
+					background-image: url("./images/splash (10).jpg");
+				}
+				#right-image-seven {
+					background-image: url("./images/splash (11).jpg");
+				}
+				#right-image-eight {
+					background-image: url("./images/splash (12).jpg");
+				}
+				#right-image-nine {
+					background-image: url("./images/splash (13).jpg");
+				}
+				#right-image-ten {
+					background-image: url("./images/splash (14).jpg");
+				}
+			}
+		}
+
+		@include respond-to(540px) {
+			display: none;
+		}
+	}
+
+	@include respond-to($tablet) {
+		height: auto;
+		flex-direction: column;
+	}
 }

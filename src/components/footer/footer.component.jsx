@@ -4,6 +4,9 @@ import TheKru from "../../assets/the-kru-icon.png";
 import "./footer.styles.scss";
 
 const Footer = () => {
+	// Donation link
+	const donateLink =
+		"https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NESTQKKMSGQHA";
 	return (
 		<>
 			<footer>
@@ -35,7 +38,13 @@ const Footer = () => {
 									<h3>Get Involved</h3>
 									<ul>
 										<li>
-											<Link to="get-involved">Make a Donation</Link>
+											<a
+												href={donateLink}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												Make a Donation
+											</a>
 										</li>
 										<li>
 											<Link to="get-involved">Volunteer Opportunities</Link>

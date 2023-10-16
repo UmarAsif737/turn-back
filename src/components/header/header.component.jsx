@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,11 +6,20 @@ import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./header.styles.scss";
 
 const Header = () => {
+	// Donation link
+	const donateLink =
+		"https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NESTQKKMSGQHA";
 	// Define location and assign <Link> the class of "active-link" for styling current route.
 	const location = useLocation();
 	const getLink = (path) => {
 		return location.pathname === path ? "active-link" : "";
 	};
+	useEffect(() => {
+		const firstElement = document.querySelector(".get-scrolled-kid");
+		if (firstElement) {
+			firstElement.scrollIntoView({ behavior: "smooth" });
+		}
+	}, [location.pathname]);
 
 	// Handle mobile menu.
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -38,6 +47,23 @@ const Header = () => {
 		}
 	};
 
+	useEffect(() => {
+		const handleOutsideClick = (event) => {
+			const menuContainer = document.getElementById("mobile-menu-container");
+
+			if (menuContainer && !menuContainer.contains(event.target)) {
+				handleCloseMenu();
+			}
+		};
+
+		document.addEventListener("click", handleOutsideClick);
+
+		// Clean up the event listener
+		return () => {
+			document.removeEventListener("click", handleOutsideClick);
+		};
+	}, []);
+
 	return (
 		<>
 			<header>
@@ -47,12 +73,18 @@ const Header = () => {
 					</Link>
 					<div id="mobile-menu-container">
 						<div id="mobile-sub-menu">
-							<Link to="donate" id="mobile-donate" onClick={handleCloseMenu}>
+							<a
+								href={donateLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								id="mobile-donate"
+								onClick={handleCloseMenu}
+							>
 								Donate
-							</Link>
+							</a>
 
 							<Link
-								to="volunteer"
+								to="get-involved"
 								id="mobile-volunteer"
 								onClick={handleCloseMenu}
 							>
@@ -122,12 +154,18 @@ const Header = () => {
 							</ul>
 							<ul id="sub-menu-items" className="desktop">
 								<li>
-									<Link to="donate" id="donate">
+									<a
+										href={donateLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										id="donate"
+										onClick={handleCloseMenu}
+									>
 										Donate
-									</Link>
+									</a>
 								</li>
 								<li>
-									<Link to="volunteer" id="volunteer">
+									<Link to="get-involved" id="volunteer">
 										Volunteer
 									</Link>
 								</li>
