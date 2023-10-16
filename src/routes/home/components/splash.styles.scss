@@ -8,7 +8,7 @@
 	display: flex;
 	justify-content: center;
 	background-color: $red;
-	//background-image: url("../../../assets//tiles.png");
+	//background-image: url("../../../assets/tiles.png");
 	overflow: hidden;
 
 	#splash-background-mobile {
@@ -294,7 +294,6 @@
 					left: 49%;
 					width: clamp(100px, 10vw, 10vw);
 					height: clamp(100px, 10vw, 10vw);
-
 					background-position: center center;
 					background-size: cover;
 				}
@@ -306,7 +305,6 @@
 					width: 15vw;
 					width: clamp(115px, 15vw, 15vw);
 					height: clamp(115px, 15vw, 15vw);
-
 					background-position: center center;
 					background-size: cover;
 				}
@@ -344,23 +342,18 @@
 				#right-image-one {
 					background-image: url("./images/Splash (5).jpg");
 				}
-
 				#right-image-two {
 					background-image: url("./images/Splash (15).jpg");
 				}
-
 				#right-image-three {
-					background-image: url("./images/Splash (7).jpg");
+					background-image: url("../../../assets/map.png");
 				}
-
 				#right-image-four {
 					background-image: url("./images/Splash (8).jpg");
 				}
-
 				#right-image-five {
 					background-image: url("./images/Splash (9).jpg");
 				}
-
 				#right-image-six {
 					background-image: url("./images/Splash (10).jpg");
 				}
@@ -368,7 +361,7 @@
 					background-image: url("./images/Splash (11).jpg");
 				}
 				#right-image-eight {
-					background-image: url("./images/Splash (12).jpg");
+					background-image: url("./images/Splash (10).jpg");
 				}
 				#right-image-nine {
 					background-image: url("./images/Splash (13).jpg");
