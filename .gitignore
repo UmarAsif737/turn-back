@@ -15,6 +15,8 @@ dist-ssr
 src/components/map/locations/images
 src/components/map/locations/plats
 src/routes/media/components/images
+src/routes/about/components/board/images
+src/routes/about/components/story/images
 
 # Editor directories and files
 .vscode/*

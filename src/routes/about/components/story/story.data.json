@@ -1,27 +1,26 @@
 [
-    {
-        "id": 1,
-        "image": "src/routes/about/components/story/images/1.jpg",
-        "title": "Removing Blighted Properties",
-        "content": "We have replaced vacant, blighted properties with quality homes reflecting the architectural integrity of Harrisburg"
-    },
-    {
-        "id": 2,
-        "image": "src/routes/about/components/story/images/2.jpg",
-        "title": "Rehabilitating Existing Units",
-        "content": "In 2010, Turn Back the Block began its renovation of live historic mill houses on Broad."
-    },
-    {
-        "id": 3,
-        "image": "src/routes/about/components/story/images/3.jpg",
-        "title": "Developing New Housing Units",
-        "content":"Turn Back the Block takes vacant lots and builds newly constructed housing with the support of community partners, grants, and personal donations."
-    },
-    {
-        "id": 4,
-        "image": "src/routes/about/components/story/images/4.jpg",
-        "title": "Increasing Home Ownership",
-        "content":"Turn Back the block changes lives by promoting homeowners and supporting families."
-    }
-    
+	{
+		"id": 1,
+		"image": "1.jpg",
+		"title": "Removing Blighted Properties",
+		"content": "We have replaced vacant, blighted properties with quality homes reflecting the architectural integrity of Harrisburg"
+	},
+	{
+		"id": 2,
+		"image": "2.jpg",
+		"title": "Rehabilitating Existing Units",
+		"content": "In 2010, Turn Back the Block began its renovation of live historic mill houses on Broad."
+	},
+	{
+		"id": 3,
+		"image": "3.jpg",
+		"title": "Developing New Housing Units",
+		"content": "Turn Back the Block takes vacant lots and builds newly constructed housing with the support of community partners, grants, and personal donations."
+	},
+	{
+		"id": 4,
+		"image": "4.jpg",
+		"title": "Increasing Home Ownership",
+		"content": "Turn Back the block changes lives by promoting homeowners and supporting families."
+	}
 ]

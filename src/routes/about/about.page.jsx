@@ -32,6 +32,10 @@ const About = () => {
 	// 	containerRef.current.style.cursor = "grab";
 	// };
 
+	// Image paths
+	const storyImagePath = "./about-story-images/";
+	const boardImagePath = "./about-board-images/";
+
 	// Read more
 	let isAccordionOpen = false;
 
@@ -86,7 +90,7 @@ const About = () => {
 								<Story
 									key={story.index}
 									id={story.id}
-									image={story.image}
+									image={storyImagePath + story.image}
 									title={story.title}
 									content={story.content}
 								/>
@@ -209,7 +213,7 @@ const About = () => {
 						{boardData.map((member) => (
 							<Board
 								key={member.index}
-								image={member.image}
+								image={boardImagePath + member.image}
 								name={member.name}
 								titles={member.titles}
 								about={member.about}

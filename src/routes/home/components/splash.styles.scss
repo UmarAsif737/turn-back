@@ -294,7 +294,7 @@
 					left: 49%;
 					width: clamp(100px, 10vw, 10vw);
 					height: clamp(100px, 10vw, 10vw);
-					background-image: url("./images/splash (5).jpg");
+
 					background-position: center center;
 					background-size: cover;
 				}
@@ -306,7 +306,7 @@
 					width: 15vw;
 					width: clamp(115px, 15vw, 15vw);
 					height: clamp(115px, 15vw, 15vw);
-					background-image: url("./images/splash (15).jpg");
+
 					background-position: center center;
 					background-size: cover;
 				}
@@ -317,7 +317,7 @@
 					left: 26%;
 					width: clamp(190px, 25vw, 25vw);
 					height: clamp(115px, 15vw, 15vw);
-					background-image: url("./images/splash (7).jpg");
+
 					background-position: center center;
 					background-size: cover;
 				}
@@ -328,7 +328,7 @@
 					left: 4%;
 					width: clamp(80px, 8vw, 8vw);
 					height: clamp(80px, 8vw, 8vw);
-					background-image: url("./images/splash (8).jpg");
+
 					background-position: center center;
 					background-size: cover;
 				}
@@ -339,9 +339,29 @@
 					left: 89%;
 					width: 8vw;
 					height: 8vw;
-					background-image: url("./images/splash (9).jpg");
+
 					background-position: center center;
 					background-size: cover;
+				}
+
+				#right-image-one {
+					background-image: url("./images/splash (5).jpg");
+				}
+
+				#right-image-two {
+					background-image: url("./images/splash (15).jpg");
+				}
+
+				#right-image-three {
+					background-image: url("./images/splash (7).jpg");
+				}
+
+				#right-image-four {
+					background-image: url("./images/splash (8).jpg");
+				}
+
+				#right-image-five {
+					background-image: url("./images/splash (9).jpg");
 				}
 
 				#right-image-six {
