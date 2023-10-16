@@ -39,3 +39,5 @@ See: https://github.com/giorgiabosello/google-maps-react-markers
 # menu close when clicked outside of
 
 # make the numbers go woah woehwo
+
+# add button hover to CTA
