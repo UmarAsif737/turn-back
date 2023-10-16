@@ -17,6 +17,7 @@ src/components/map/locations/plats
 src/routes/media/components/images
 src/routes/about/components/board/images
 src/routes/about/components/story/images
+src/routes/home/components/images
 
 # Editor directories and files
 .vscode/*
