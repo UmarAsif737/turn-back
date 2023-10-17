@@ -70,6 +70,10 @@
 				width: clamp(190px, 25%, 25%);
 				font-size: clamp(16px, 1vw, 20px);
 
+				&:hover {
+					letter-spacing: 1px;
+				}
+
 				@include respond-to($mobile) {
 					width: 100%;
 					padding: 16px 0;

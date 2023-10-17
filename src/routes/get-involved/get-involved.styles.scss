@@ -43,12 +43,22 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: $purple;
+				background: url("../../assets/keys.jpg");
+				background-size: cover;
 				z-index: 1;
+
+				@include respond-to(1200px) {
+					background-position: 40%;
+				}
+
+				@include respond-to(700px) {
+					background-position: 50%;
+				}
 
 				@include respond-to($mobile) {
 					position: relative;
 					height: 200px;
+					background-position: 75% center;
 				}
 			}
 			#donate-today {

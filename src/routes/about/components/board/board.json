@@ -1,126 +1,126 @@
 [
-    {
-        "image": "Brown.jpg",
-        "name": "Ashley Brown",
-        "titles": {
-            "one":"Executive Director"
-        },
-        "about": "We are a catalyst in revitalizing the Harrisburg neighborhood through homeownership and the creation of quality housing. It is in promoting homeownership that we help change lives, provide stability, a sense of pride, and economic security for homeowners."
-    },
-    {
-        "image": "Muller.jpg",
-        "name": "Garon Muller",
-        "titles": {
-            "one":"President",
-            "two":"Partner, Burnside Law Firm"
-        },
-        "about": "I was inspired to become involved with Turn Back the Block by a desire to better Augusta through the revitalization of underserved areas like Harrisburg."
-    },
-    {
-        "image": "Harbin.jpg",
-        "name": "Bert Harbin",
-        "titles": {
-            "one":"President",
-            "two":"Account Executive, Assured Partners"
-        },
-        "about": "As a lifelong Augustan, it is important to me to be involved in an organization that is working to restore the architectural integrity of Harrisburg and positively promote homeownership."
-    },
-    {
-        "image": "Douglas.jpg",
-        "name": "Katie Douglas",
-        "titles": {
-            "one":"Secretary",
-            "two":"Cash Management Officer and Banking Officer-Queensborough National Bank and Trust Company"
-        },
-        "about": "Being involved in my community is very important to me. I love being part of Turn Back the Block because we are not only helping to revitalize Harrisburg, but we are also building long-lasting bonds with individuals in our community."
-    },
-    {
-        "image": "Bennett.jpg",
-        "name": "Jim Bennett, Jr.",
-        "titles": {
-            "one":"Treasurer",
-            "two":"Managing Partner, Resource Management Augusta, LLC"
-        },
-        "about": "I have enjoyed the challenges of helping build an organization that is becoming more and more relevant each day in our community and is creating positive change in the Harrisburg neighborhood. I have also enjoyed getting to know numerous individuals who are doing their own thing in their own way, making Harrisburg a better place to live and work."
-    },
-    {
-        "image": "Benton.jpg",
-        "name": "Chad Benton",
-        "titles": {
-            "one":"Purchasing Manager, Howard Lumber Company"
-        },
-        "about": "Volunteering with Turn Back the Block has been a great way for me to give back to my community while sharing my construction skills and material knowledge. It’s great to be a part of an organization leading the way for positive change in Harrisburg!"
-    },
-    {
-        "image": "Boardman.jpg",
-        "name": "Clay Boardman",
-        "titles": {
-            "one":"Managing Member, The Vireo Group, LLC"
-        },
-        "about": "Anne Catherine Murray and I saw an opportunity to assist in working in a neighborhood where years of disinvestment had taken its toll. We created an organization to encourage homeownership as a means to revitalize the historic neighborhood."
-    },
-    {
-        "image": "Capers.jpg",
-        "name": "John Mark Capers",
-        "titles": {
-            "one":"Senior Loan Officer, Meybohm Mortgage"
-        },
-        "about": "I was inspired to join TBTB by my shared desire to advocate homeownership in the historic Harrisburg neighborhood through education, opportunity, and community support."
-    },
-    {
-        "image": "Hitchcock.jpg",
-        "name": "Phin Hitchcock",
-        "titles": {
-            "one":"Director, Fireside Ministries & Industries"
-        },
-        "about": "Since 2010, the desire for neighborhood change has inspired me to be a part of Turn Back the Block. It means a great deal to be a part of the neighborhood’s transition and restoration."
-    },
-    {
-        "image": "Mercer.jpg",
-        "name": "Cody Mercer",
-        "titles": {
-            "one":"Lieutenant, Augusta Fire Department"
-        },
-        "about": "For me, serving Augusta and its citizens is a passion and a privilege. Turn Back the Block provides an opportunity to do just that—passionately serve others. As a Turn Back the Block Board member, returning a once thriving neighborhood, right in the heart of Augusta, to its proud standing is just one reason I serve on the Board. Most importantly, it allows us to work with people to rebuild a future for a strong, lasting community."
-    },
-    {
-        "image": "Murray.jpg",
-        "name": "Anne Catherine Murray",
-        "titles": {
-            "one":"Executive Director, Augusta Symphony, Inc."
-        },
-        "about": "I am honored to be a part of the team that founded Turn Back the Block in 2010. We knew what Harrisburg had been in the past and we believed in a strategy to bring it back, one house, one block at a time."
-    },
-    {
-        "image": "Sell.jpg",
-        "name": "Brannon Sell",
-        "titles": {
-            "one":"Principal, M. Brannon Sell & Co."
-        },
-        "about": "I was drawn to Turn Back the Block because of its Mission: to reawaken and dramatically transform the community of Harrisburg by providing quality housing for homeownership. I remain a part of the initiative because I am fortunate to serve with a remarkably talented and engaged Board committed to this challenge."
-    },
-    {
-        "image": "Thorpe.jpg",
-        "name": "Kelly Thorpe",
-        "titles": {
-            "one":"LifeStance Health Therapist"
-        },
-        "about": "I was inspired to join the TBTB board after years of experience with helping the homeless. I have always believed in the power of change and that everyone has strengths to make a change in their lives. I have great respect for what TBTB is doing for the Harrisburg community by promoting homeownership for those who may not have had the opportunity otherwise."
-    },
-    {
-        "image": "Weston.jpg",
-        "name": "Kristen Weston",
-        "titles": {
-            "one":"Client Service Associate, Asset Advisors"
-        },
-        "about": "I joined the organization in 2017 and love being part of an organization that is making positive change in a historic neighborhood in Augusta. Serving others and being a good neighbor is contagious!"
-    },
-    {
-        "image": "Vera.jpg",
-        "name": "Phillip Vera",
-        "titles": {
-            "one":"Partner, Rockbrook Realty"
-        },
-        "about": "I enjoy being a part of the revitalization of the Harrisburg neighborhood and the vision the Board of Directors has to make that a reality."
-    }
+	{
+		"image": "Brown.jpg",
+		"name": "Ashley Brown",
+		"titles": {
+			"one": "Executive Director"
+		},
+		"about": "We are a catalyst in revitalizing the Harrisburg neighborhood through homeownership and the creation of quality housing. It is in promoting homeownership that we help change lives, provide stability, a sense of pride, and economic security for homeowners."
+	},
+	{
+		"image": "Muller.jpg",
+		"name": "Garon Muller",
+		"titles": {
+			"one": "President",
+			"two": "Partner, Burnside Law Firm"
+		},
+		"about": "I was inspired to become involved with Turn Back the Block by a desire to better Augusta through the revitalization of underserved areas like Harrisburg."
+	},
+	{
+		"image": "Harbin.jpg",
+		"name": "Bert Harbin",
+		"titles": {
+			"one": "Vice President",
+			"two": "Account Executive, Assured Partners"
+		},
+		"about": "As a lifelong Augustan, it is important to me to be involved in an organization that is working to restore the architectural integrity of Harrisburg and positively promote homeownership."
+	},
+	{
+		"image": "Douglas.jpg",
+		"name": "Katie Douglas",
+		"titles": {
+			"one": "Secretary",
+			"two": "Cash Management Officer and Banking Officer, Queensborough National Bank and Trust Company"
+		},
+		"about": "Being involved in my community is very important to me. I love being part of Turn Back the Block because we are not only helping to revitalize Harrisburg, but we are also building long-lasting bonds with individuals in our community."
+	},
+	{
+		"image": "Bennett.jpg",
+		"name": "Jim Bennett, Jr.",
+		"titles": {
+			"one": "Treasurer",
+			"two": "Managing Partner, Resource Management Augusta, LLC"
+		},
+		"about": "I have enjoyed the challenges of helping build an organization that is becoming more and more relevant each day in our community and is creating positive change in the Harrisburg neighborhood. I have also enjoyed getting to know numerous individuals who are doing their own thing in their own way, making Harrisburg a better place to live and work."
+	},
+	{
+		"image": "Benton.jpg",
+		"name": "Chad Benton",
+		"titles": {
+			"one": "Purchasing Manager, Howard Lumber Company"
+		},
+		"about": "Volunteering with Turn Back the Block has been a great way for me to give back to my community while sharing my construction skills and material knowledge. It’s great to be a part of an organization leading the way for positive change in Harrisburg!"
+	},
+	{
+		"image": "Boardman.jpg",
+		"name": "Clay Boardman",
+		"titles": {
+			"one": "Managing Member, The Vireo Group, LLC"
+		},
+		"about": "Anne Catherine Murray and I saw an opportunity to assist in working in a neighborhood where years of disinvestment had taken its toll. We created an organization to encourage homeownership as a means to revitalize the historic neighborhood."
+	},
+	{
+		"image": "Capers.jpg",
+		"name": "John Mark Capers",
+		"titles": {
+			"one": "Senior Loan Officer, Meybohm Mortgage"
+		},
+		"about": "I was inspired to join TBTB by my shared desire to advocate homeownership in the historic Harrisburg neighborhood through education, opportunity, and community support."
+	},
+	{
+		"image": "Hitchcock.jpg",
+		"name": "Phin Hitchcock",
+		"titles": {
+			"one": "Director, Fireside Ministries & Industries"
+		},
+		"about": "Since 2010, the desire for neighborhood change has inspired me to be a part of Turn Back the Block. It means a great deal to be a part of the neighborhood’s transition and restoration."
+	},
+	{
+		"image": "Mercer.jpg",
+		"name": "Cody Mercer",
+		"titles": {
+			"one": "Lieutenant, Augusta Fire Department"
+		},
+		"about": "For me, serving Augusta and its citizens is a passion and a privilege. Turn Back the Block provides an opportunity to do just that—passionately serve others. As a Turn Back the Block Board member, returning a once thriving neighborhood, right in the heart of Augusta, to its proud standing is just one reason I serve on the Board. Most importantly, it allows us to work with people to rebuild a future for a strong, lasting community."
+	},
+	{
+		"image": "Murray.jpg",
+		"name": "Anne Catherine Murray",
+		"titles": {
+			"one": "Executive Director, Augusta Symphony, Inc."
+		},
+		"about": "I am honored to be a part of the team that founded Turn Back the Block in 2010. We knew what Harrisburg had been in the past and we believed in a strategy to bring it back, one house, one block at a time."
+	},
+	{
+		"image": "Sell.jpg",
+		"name": "Brannon Sell",
+		"titles": {
+			"one": "Principal, M. Brannon Sell & Co."
+		},
+		"about": "I was drawn to Turn Back the Block because of its Mission: to reawaken and dramatically transform the community of Harrisburg by providing quality housing for homeownership. I remain a part of the initiative because I am fortunate to serve with a remarkably talented and engaged Board committed to this challenge."
+	},
+	{
+		"image": "Thorpe.jpg",
+		"name": "Kelly Thorpe",
+		"titles": {
+			"one": "LifeStance Health Therapist"
+		},
+		"about": "I was inspired to join the TBTB board after years of experience with helping the homeless. I have always believed in the power of change and that everyone has strengths to make a change in their lives. I have great respect for what TBTB is doing for the Harrisburg community by promoting homeownership for those who may not have had the opportunity otherwise."
+	},
+	{
+		"image": "Weston.jpg",
+		"name": "Kristen Weston",
+		"titles": {
+			"one": "Client Service Associate, Asset Advisors"
+		},
+		"about": "I joined the organization in 2017 and love being part of an organization that is making positive change in a historic neighborhood in Augusta. Serving others and being a good neighbor is contagious!"
+	},
+	{
+		"image": "Vera.jpg",
+		"name": "Phillip Vera",
+		"titles": {
+			"one": "Partner, Rockbrook Realty"
+		},
+		"about": "I enjoy being a part of the revitalization of the Harrisburg neighborhood and the vision the Board of Directors has to make that a reality."
+	}
 ]

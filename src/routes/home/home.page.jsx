@@ -1,5 +1,7 @@
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Splash from "./components/splash.component";
+import Testimonials from "../../components/testimonials/testimonials.component";
 import Map from "../../components/map/map.component";
 import Instagram from "../../components/instagram/instagram.component";
 import CTA from "../../components/cta/cta.component";
@@ -9,14 +11,62 @@ import LadonnaImg from "./images/LaDonna-Doleman.jpg";
 import "./home.styles.scss";
 
 const Home = () => {
-	let isAccordionOpen = false; // Define the initial state
+	// Number animation
+	const [startAnimation, setStartAnimation] = useState(false);
+	const numberContainerRef = useRef(null);
 
+	useEffect(() => {
+		const getRootMargin = () => {
+			return window.innerWidth <= 431 ? "-100px" : "-40% 0% -40% 0%";
+		};
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setStartAnimation(true);
+					observer.disconnect();
+				}
+			},
+			{
+				root: null,
+				rootMargin: getRootMargin(),
+				threshold: 0.5,
+			}
+		);
+
+		if (numberContainerRef.current) {
+			observer.observe(numberContainerRef.current);
+		}
+	}, []);
+
+	useEffect(() => {
+		if (startAnimation) {
+			const counters = document.querySelectorAll(".counter");
+			counters.forEach((counter) => {
+				counter.innerText = "0";
+				let target = +counter.getAttribute("data-target");
+				let step = target / 500;
+
+				let countIt = function () {
+					let displayedCount = +counter.innerText;
+					if (displayedCount < target) {
+						counter.innerText = Math.ceil(displayedCount + step).toString();
+						setTimeout(countIt, 50);
+					} else {
+						counter.innerText = target.toString();
+					}
+				};
+				countIt();
+			});
+		}
+	}, [startAnimation]);
+
+	// Handle accordion
+	let isAccordionOpen = false;
 	const accordion = () => {
 		const hiddenText = document.getElementById("ladonna-accordion");
 		const accordionButton = document.getElementById("ladonna-accordion-button");
-
-		isAccordionOpen = !isAccordionOpen; // Toggle the state
-
+		isAccordionOpen = !isAccordionOpen;
 		accordionButton.innerText = isAccordionOpen ? "SHOW LESS -" : "READ MORE +";
 		hiddenText.classList[isAccordionOpen ? "add" : "remove"]("open-accordion");
 	};
@@ -34,15 +84,15 @@ const Home = () => {
 							</h2>
 						</div>
 						<p className="text-content">
-							Turn Back The Block is a catalyst in reveitalizing the Harrisburg
+							Turn Back The Block is a catalyst in revitalizing the Harrisburg
 							neighborhood through homeownership and the creation of quality
-							houseing. It is in promoting homeownership that we help change
+							housing. It is in promoting homeownership that we help change
 							lives, provide stability, a sense of pride, and economic stability
 							for homeowners.
 						</p>
 						<div className="link-container">
 							<i className="fa-regular fa-arrow-right link-icon"></i>
-							<Link to="get-involvedr">Discover Ways to Get Involved</Link>
+							<Link to="get-involved">Discover Ways to Get Involved</Link>
 						</div>
 					</div>
 					<div className="right-content">
@@ -56,27 +106,37 @@ const Home = () => {
 						<span className="subheading">Our Impact</span>
 						<h2 className="heading">Over the Past Decade</h2>
 					</div>
-					<div className="number-container">
+					<div className="number-container" ref={numberContainerRef}>
 						<div className="number">
-							<span className="counter">24</span>
+							<span className="counter" data-target="24">
+								0
+							</span>
 							<span className="subheading">
 								Maintained lots ready for new construction
 							</span>
 						</div>
 						<div className="number">
-							<span className="counter">09</span>
+							<span className="counter" data-target="09">
+								0
+							</span>
 							<span className="subheading">New homeowners added</span>
 						</div>
 						<div className="number">
-							<span className="counter">08</span>
+							<span className="counter" data-target="08">
+								0
+							</span>
 							<span className="subheading">Homes renovated</span>
 						</div>
 						<div className="number">
-							<span className="counter">07</span>
+							<span className="counter" data-target="07">
+								0
+							</span>
 							<span className="subheading">Homes constructed</span>
 						</div>
 						<div className="number">
-							<span className="counter">01</span>
+							<span className="counter" data-target="01">
+								0
+							</span>
 							<span className="subheading">
 								Renovated office / warehouse space
 							</span>
@@ -117,7 +177,8 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<section className="home-section testimonials">
+			<Testimonials />
+			{/* <section className="home-section testimonials">
 				<div className="container">
 					<div className="content">
 						<div className="subheading-quote">
@@ -133,7 +194,7 @@ const Home = () => {
 						</Link>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			<section className="home-section spotlight">
 				<div className="container">
 					<div className="left-content">

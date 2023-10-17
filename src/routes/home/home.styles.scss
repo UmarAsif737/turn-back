@@ -271,58 +271,6 @@
 	}
 }
 
-.testimonials {
-	position: relative;
-	background: linear-gradient(
-			rgba(169, 172, 205, 0.8),
-			rgba(169, 172, 205, 0.8)
-		),
-		url("./images/paper-texture.png"), url("./images/testimonials.jpg");
-	background-position: center center, center center, center center;
-	background-repeat: no-repeat, repeat, no-repeat;
-	background-size: cover, contain, cover;
-
-	.container {
-		position: relative;
-		z-index: 9;
-		.content {
-			display: flex;
-			flex-direction: column;
-			width: 60%;
-			gap: 4vw;
-			@include respond-to($tablet) {
-				width: clamp(calc(431px - 20px), 70%, 70%);
-			}
-			@include respond-to($mobile) {
-				width: 100%;
-				gap: 8vw;
-			}
-			.subheading {
-				font-family: $mont;
-				font-size: clamp(18px, 0.8vw, 1vw);
-				font-weight: 700;
-				color: $white;
-				text-transform: uppercase;
-			}
-			blockquote {
-				color: $white;
-				font-family: $mont;
-				font-weight: 600;
-				line-height: 1.4;
-				font-size: clamp(26px, 2.4vw, 2.4vw);
-				margin-top: 1vw;
-			}
-			.button {
-				color: $white;
-				font-size: 16px;
-				@include respond-to($mobile) {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
 .spotlight {
 	.container {
 		.left-content {

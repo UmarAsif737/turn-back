@@ -11,8 +11,8 @@ const Map = () => {
 	// Paths
 	//const locationImagePath = "src/components/map/locations/images/";
 	//const locationPlatPath = "src/components/map/locations/plats/";
-	const staticLocationImagePath = "./map-location-images/";
-	const staticPlatPath = "./map-location-plats/";
+	const staticLocationImagePath = "/map-location-images/";
+	const staticPlatPath = "/map-location-plats/";
 
 	// Status color and length for desktop
 	const ownedStatus = locationData.locations
@@ -227,10 +227,12 @@ const Map = () => {
 										<div className="image-container">
 											<StatusMarkerMobile status={location.status} />
 											<img
-												src={
-													staticLocationImagePath + location.address + ".jpg"
-												}
+												// src={
+												// 	staticLocationImagePath + location.address + ".jpg"
+												// }
+												src={`${staticLocationImagePath}${location.address}.jpg`}
 												alt={location.address}
+												loading="lazy"
 											/>
 										</div>
 										<div className="info-container">
@@ -242,7 +244,8 @@ const Map = () => {
 												{location.status !== "owned" && (
 													<a
 														className="plat"
-														href={staticPlatPath + location.address + ".pdf"}
+														// href={staticPlatPath + location.address + ".pdf"}
+														href={`${staticPlatPath}${location.address}.pdf`}
 														target="_blank"
 														rel="noopener noreferrer"
 													>

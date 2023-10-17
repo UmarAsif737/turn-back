@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import OurMission from "../../assets/our-mission.jpg";
+import conductForm from "../../assets/Volunteer Conduct Form.pdf";
 import "./get-involved.styles.scss";
 
 const GetInvolved = () => {
@@ -140,8 +141,14 @@ const GetInvolved = () => {
 									<input type="checkbox" id="understand" />
 									<label htmlFor="understand">
 										I have read and understand the{" "}
-										<a href="">Volunteer Conduct Agreement</a> and agree to
-										abide by it<span className="required">*</span>
+										<a
+											href={conductForm}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Volunteer Conduct Agreement
+										</a>{" "}
+										and agree to abide by it<span className="required">*</span>
 									</label>
 								</div>
 
@@ -169,9 +176,9 @@ const GetInvolved = () => {
 								<input
 									className="button red"
 									type="submit"
-									defaultValue="Sign Up"
+									value="Sign Up"
 									role="button"
-								></input>
+								/>
 							</form>
 						</div>
 					</div>

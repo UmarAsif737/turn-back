@@ -3,7 +3,7 @@
 const Board = ({ image, name, titles, about }) => {
 	return (
 		<div id="board-member">
-			<img src={image} alt={name} />
+			<img src={image} alt={name} loading="lazy" />
 			<h3>{name}</h3>
 
 			{Object.keys(titles).map((key) => {

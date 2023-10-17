@@ -2,14 +2,25 @@
 
 #projects-section {
 	width: 100%;
+
+	p {
+		color: $black;
+	}
 	#projects-container {
 		width: clamp($tablet, 70vw, 70vw);
 		margin: 0 auto;
 		padding: 20px;
+		margin-top: 60px;
 
 		@include respond-to($tablet) {
+			margin-top: 40px;
 			width: 100%;
 		}
+
+		@include respond-to($mobile) {
+			margin-top: 20px;
+		}
+
 		.project {
 			display: flex;
 			gap: 4vw;
@@ -22,7 +33,7 @@
 			}
 
 			@include respond-to($mobile) {
-				margin-top: 20px;
+				margin-top: 40px;
 				margin-bottom: 60px;
 			}
 

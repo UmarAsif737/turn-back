@@ -70,7 +70,7 @@ const About = () => {
 						<div className="text-container">
 							<span className="subheading">Our Impact</span>
 							<p>
-								In revitalizing, we strengthen our entire community, in
+								In revitalizing, we strengthen our entire community. In
 								Augusta's Comprehensive Plan, 4 high priority needs were
 								identified.
 							</p>
@@ -162,7 +162,7 @@ const About = () => {
 								<p className="main-two">
 									Turn Back the Block continues to be a catalyst to community
 									revitalization in Augusta by creating homeownership in
-									Harrisburg
+									Harrisburg.
 								</p>
 							</div>
 							<button id="accordion-button" onClick={accordion}>
@@ -197,7 +197,7 @@ const About = () => {
 							<p className="main-two">
 								Turn Back the Block continues to be a catalyst to community
 								revitalization in Augusta by creating homeownership in
-								Harrisburg
+								Harrisburg.
 							</p>
 						</div>
 					</div>

@@ -7,7 +7,7 @@
 	height: clamp(330px, 30vw, 30vw);
 	display: flex;
 	justify-content: center;
-	background: url("/home-splash-images/red-mosaic.png"), $red;
+	background: url("../../../assets/red-mosaic.png"), $red;
 	background-size: contain;
 	background-repeat: repeat;
 	overflow: hidden;

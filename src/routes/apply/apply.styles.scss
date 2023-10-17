@@ -26,18 +26,65 @@
 
 		#apply-information,
 		#apply-form-container {
-			h2 {
-				font-family: $intro;
-				font-size: 20px;
-				color: $black;
+			.heading-button-container {
+				display: flex;
+				align-items: center;
+
+				@include respond-to($mobile) {
+					align-items: flex-start;
+				}
+
+				&:last-of-type {
+					margin-bottom: 20px;
+				}
+
+				h2 {
+					font-family: $intro;
+					font-size: 20px;
+					color: $black;
+					flex-grow: 1;
+				}
+
+				i {
+					display: none;
+					font-size: 20px;
+					color: $red;
+					flex-shrink: 1;
+					transform: rotate(90deg);
+					transition: transform 0.1s linear;
+					will-change: transform;
+
+					@include respond-to($tablet) {
+						display: block;
+						font-size: 18px;
+					}
+
+					@include respond-to($mobile) {
+						margin-top: 7px;
+						font-size: 16px;
+					}
+
+					&.rotated {
+						transform: rotate(180deg);
+					}
+				}
 			}
+
 			ul {
 				list-style-type: number;
 				list-style-position: inside;
-				margin: 30px 0 40px 0;
+				margin: 30px 0 30px 0;
 
 				@include respond-to($tablet) {
-					margin: 0 0 40px 0;
+					border-bottom: 1px solid $black;
+					margin: 30px 0 30px 0;
+					height: 0;
+					max-height: 99999px;
+					overflow: hidden;
+
+					&.open {
+						height: auto;
+					}
 				}
 
 				li {
@@ -47,39 +94,55 @@
 
 					@include respond-to($tablet) {
 						&:first-of-type {
-							margin: 10px 0 20px 0;
+							margin: 0;
 						}
 					}
 				}
 			}
 			p {
 				color: $black;
+
+				@include respond-to($tablet) {
+					height: 0;
+					max-height: 99999px;
+					overflow: hidden;
+					//margin-top: 10px;
+
+					&.open {
+						height: auto;
+						margin-bottom: 20px;
+					}
+				}
 			}
 		}
 
 		#apply-information {
-			h2 {
-				@include respond-to($mobile) {
-					margin: 20px 0 5px 0;
-				}
+			padding-bottom: 30px;
+
+			@include respond-to($tablet) {
+				border-bottom: 1px solid $black;
+				padding-bottom: 10px;
 			}
+
+			// h2 {
+			// 	@include respond-to($mobile) {
+			// 		margin: 20px 0 5px 0;
+			// 	}
+			// }
 		}
 
 		#apply-form-container {
-			h2 {
-				@include respond-to($mobile) {
-					margin: 20px 0 5px 0;
-				}
+			@include respond-to($mobile) {
+				margin-top: 10px;
 			}
-			p {
-				&:nth-of-type(2) {
-					margin: 30px 0;
-				}
 
-				&.disclaimer {
-					font-size: 14px;
-					font-style: italic;
-				}
+			#pre {
+				margin: 40px 0 20px 0;
+			}
+
+			.disclaimer {
+				font-size: 14px;
+				font-style: italic;
 			}
 
 			form {
@@ -87,11 +150,27 @@
 				grid-template-columns: 1fr 1fr 1fr 1fr;
 				column-gap: 15px;
 				row-gap: 25px;
-				margin: 30px 0;
+				//margin: 0px 0;
+
+				@include respond-to($tablet) {
+					height: 0;
+					max-height: 99999px;
+					overflow: hidden;
+					margin: 20px 0;
+
+					&.open {
+						height: auto;
+					}
+				}
 
 				@include respond-to($mobile) {
 					display: flex;
 					flex-direction: column;
+				}
+
+				p {
+					height: auto;
+					grid-column: 1 / 5;
 				}
 
 				#referral {

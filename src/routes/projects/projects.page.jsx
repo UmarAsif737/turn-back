@@ -45,6 +45,14 @@ const Projects = () => {
 		<>
 			<section id="projects-section">
 				<div id="projects-container">
+					<p>
+						Turn Back the Block operates with the generous support of
+						volunteers, private contributions, grants, and partnerships. If you
+						or your business is interested in making an in-kind, tax deductible
+						gift of materials or service to one or both current projects, it
+						will be greatly appreciated and efficiently utilized. Together we
+						can change lives, fulfill dreams, and revitalize Harrisburg.
+					</p>
 					<div id="project-one" className="project">
 						<div className="content-container">
 							<div className="heading-container">

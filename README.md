@@ -30,14 +30,8 @@ See: https://github.com/giorgiabosello/google-maps-react-markers
 
 # form validation and processing
 
-# server env files
-
 # instagram token refresh script
 
 # error handling
 
-# menu close when clicked outside of
-
 # make the numbers go woah woehwo
-
-# add button hover to CTA

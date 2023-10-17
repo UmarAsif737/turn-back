@@ -68,7 +68,7 @@ const Splash = () => {
 							<br className="break" /> One Block At a Time
 						</h1>
 						<p>
-							Through colunteers and donations, we create afforadable home
+							Through volunteers and donations, we create affordable home
 							ownership opportunities where abandoned homes and vacant lots once
 							stood.
 						</p>

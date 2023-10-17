@@ -8,15 +8,41 @@ const Apply = () => {
 		setHeard(e.target.value);
 	};
 
+	// Accordion
+	const [isOpen, setIsOpen] = useState({
+		first: false,
+		second: false,
+		third: true,
+	});
+
+	const toggleAccordion = (key) => {
+		setIsOpen({
+			...isOpen,
+			[key]: !isOpen[key],
+		});
+	};
+
 	return (
 		<>
 			<section id="apply-section">
 				<div className="container">
 					<div id="apply-information">
-						<h2>
-							What are the responsibilities of a Turn Back the Block Applicant?
-						</h2>
-						<ul>
+						<div
+							className="heading-button-container"
+							onClick={() => toggleAccordion("first")}
+						>
+							<h2>
+								What are the responsibilities of a Turn Back the Block
+								Applicant?
+							</h2>
+							<i
+								className={`fa-sharp fa-solid fa-triangle ${
+									isOpen.first ? "rotated" : ""
+								}`}
+							></i>
+						</div>
+
+						<ul className={`${isOpen.first ? "open" : ""}`}>
 							<li>
 								Participate in sweat equity activities totaling 350 hours. Of
 								those hours, 150 can be completed by friends and family, however
@@ -52,8 +78,19 @@ const Apply = () => {
 							</li>
 							<li>Occupy home as primary residence.</li>
 						</ul>
-						<h2>Who qualifies for a Turn Back the Block home?</h2>
-						<p>
+						<div
+							className="heading-button-container"
+							onClick={() => toggleAccordion("second")}
+						>
+							<h2>Who qualifies for a Turn Back the Block home?</h2>
+							<i
+								className={`fa-sharp fa-solid fa-triangle ${
+									isOpen.second ? "rotated" : ""
+								}`}
+							></i>
+						</div>
+
+						<p className={`${isOpen.second ? "open" : ""}`}>
 							There is no income minimum or maximum to qualify. Applicants are
 							selected by our Family Selection & Shepherding Committee, based on
 							several factors to include: need, willingness to participate in
@@ -63,10 +100,24 @@ const Apply = () => {
 						</p>
 					</div>
 					<div id="apply-form-container">
-						<h2>How do I apply for a home?</h2>
-						<p>To apply, please submit your pre-application below:</p>
+						<div
+							className="heading-button-container"
+							onClick={() => toggleAccordion("third")}
+						>
+							<h2>How do I apply for a home?</h2>
+							<i
+								className={`fa-sharp fa-solid fa-triangle ${
+									isOpen.third ? "rotated" : ""
+								}`}
+							></i>
+						</div>
 
-						<form name="pre-application" method="post">
+						<form
+							className={`${isOpen.third ? "open" : ""}`}
+							name="pre-application"
+							method="post"
+						>
+							<p>To apply, please submit your pre-application below:</p>
 							<label>
 								Primary Applicant Name<span className="required">*</span>
 								<input type="text" name="primary-name" required />
@@ -137,12 +188,11 @@ const Apply = () => {
 							<input
 								className="button red"
 								type="submit"
-								defaultValue="Submit Pre-Application"
+								value="Submit Pre-Application"
 								role="button"
 							></input>
 						</form>
-
-						<p>
+						<p id="pre">
 							We will contact you once we receive your pre-application. If you
 							are eligible for the program, the next steps are an intake with
 							CSRA EOA, Inc., completing a full application, and beginning

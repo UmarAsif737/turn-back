@@ -4,7 +4,9 @@
 .page-heading-container {
 	width: 100%;
 	padding: 5vw 0 2vw 0;
-	background: $red;
+	background: url("/red-mosaic.png"), $red;
+	background-size: fit;
+	background-repeat: repeat;
 	.page-heading {
 		width: clamp(768px, 70vw, 70vw);
 		margin: 0 auto;
