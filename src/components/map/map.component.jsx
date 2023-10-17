@@ -245,7 +245,7 @@ const Map = () => {
 													<a
 														className="plat"
 														// href={staticPlatPath + location.address + ".pdf"}
-														href={`${staticPlatPath}${location.address}.pdf`}
+														href={`${staticPlatPath}${location.address.toLowerCase()}.pdf`}
 														target="_blank"
 														rel="noopener noreferrer"
 													>
