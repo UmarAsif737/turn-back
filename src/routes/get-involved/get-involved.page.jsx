@@ -22,7 +22,7 @@ const GetInvolved = () => {
 							<h2>Help Us Turn Back the Block</h2>
 							<div className="link-container">
 								<i className="fa-regular fa-arrow-right link-icon"></i>
-								<a href={donateLink} target="_blank" rel="noopener noreferrer">
+								<a href="#" className="cv-button">
 									Donate Today
 								</a>
 							</div>
@@ -41,20 +41,20 @@ const GetInvolved = () => {
 							<div id="schedule-container">
 								<h3>Upcoming Events</h3>
 								<div id="schedule">
-									<p className="date">Oct 1</p>
+									{/* <p className="date">Oct 1</p>
 									<p className="event">
 										<span>Block Party</span> <span>-</span> 9:30-11:30 am <br />{" "}
 										located at 1924 Battle Row
 										<br />
-									</p>
+									</p> */}
 									<p className="date">Oct 28</p>
 									<p className="event">
-										<span>Halloween Trunk or Treat</span> <span>-</span>{" "}
+										<span>Halloween Trunk or Treat</span> <span>|</span>{" "}
 										5:30-6:30 pm <br />
 										located across from the TBTB office / warehouse
 										<br />
 									</p>
-									<p className="date">Nov 9</p>
+									{/* <p className="date">Nov 9</p>
 									<p className="event">
 										<span>Community Meal</span> <span>-</span> 4:30-5:30 pm{" "}
 										<br /> located across from the TBTB office / warehouse
@@ -71,7 +71,7 @@ const GetInvolved = () => {
 										<span>Block Party</span> <span>-</span> 9:30-11:30 am <br />{" "}
 										located at 1924 Battle Row
 										<br />
-									</p>
+									</p> */}
 								</div>
 							</div>
 						</div>

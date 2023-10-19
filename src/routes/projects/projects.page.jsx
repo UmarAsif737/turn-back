@@ -95,17 +95,19 @@ const Projects = () => {
 						<div className="content-container">
 							<div className="heading-container">
 								<span className="subheading">Two Single-Family Homes</span>
-								<h2 className="heading">2017 Battle Row</h2>
+								<h2 className="heading">
+									2017 Battle Row & 2103 Millview Street
+								</h2>
 							</div>
 							<p className="text-content">
 								Turn Back the Block has partnered with Newsome Homes and
-								Construction to build 2017 Battle Row—a two-family home boasting
-								1344 square feet of conditioned space and 522 feet (Unit A) and
-								320 (Unit B) of porch space. To ensure a design which reflects
-								the historic integrity of the neighborhood, we enlisted
-								Harrisburg’s own Studio 3 Design Group, who created an exciting
-								concept based upon an early 20th century Craftsman style
-								bungalow.
+								Construction to build 2017 Battle Row & 2103 Millview Street—a
+								two-family home boasting 1344 square feet of conditioned space
+								and 522 feet (Unit A) and 320 (Unit B) of porch space. To ensure
+								a design which reflects the historic integrity of the
+								neighborhood, we enlisted Harrisburg’s own Studio 3 Design
+								Group, who created an exciting concept based upon an early 20th
+								century Craftsman style bungalow.
 							</p>
 						</div>
 						<div className="image-container">

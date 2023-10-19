@@ -88,7 +88,7 @@ const About = () => {
 						<div id="stories-container">
 							{storyData.map((story) => (
 								<Story
-									key={story.index}
+									key={story.id}
 									id={story.id}
 									image={storyImagePath + story.image}
 									title={story.title}
@@ -212,7 +212,7 @@ const About = () => {
 					<div id="board-container">
 						{boardData.map((member) => (
 							<Board
-								key={member.index}
+								key={member.name}
 								image={boardImagePath + member.image}
 								name={member.name}
 								titles={member.titles}

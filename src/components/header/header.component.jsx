@@ -74,9 +74,11 @@ const Header = () => {
 					<div id="mobile-menu-container">
 						<div id="mobile-sub-menu">
 							<a
-								href={donateLink}
-								target="_blank"
-								rel="noopener noreferrer"
+								// href={donateLink}
+								// target="_blank"
+								// rel="noopener noreferrer"
+								href="#"
+								className="cv-button"
 								id="mobile-donate"
 								onClick={handleCloseMenu}
 							>
@@ -155,9 +157,11 @@ const Header = () => {
 							<ul id="sub-menu-items" className="desktop">
 								<li>
 									<a
-										href={donateLink}
-										target="_blank"
-										rel="noopener noreferrer"
+										// href={donateLink}
+										// target="_blank"
+										// rel="noopener noreferrer"
+										href="#"
+										className="cv-button"
 										id="donate"
 										onClick={handleCloseMenu}
 									>

@@ -30,7 +30,7 @@ const Home = () => {
 			{
 				root: null,
 				rootMargin: getRootMargin(),
-				threshold: 0.5,
+				threshold: 0,
 			}
 		);
 

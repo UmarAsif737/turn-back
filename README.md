@@ -34,4 +34,6 @@ See: https://github.com/giorgiabosello/google-maps-react-markers
 
 # error handling
 
-# make the numbers go woah woehwo
+# match logo colors
+
+# probably turn events into json map

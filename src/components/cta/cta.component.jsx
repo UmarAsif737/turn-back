@@ -13,10 +13,11 @@ const CTA = () => {
 					</h2>
 					<div id="cta-buttons">
 						<a
-							href={donateLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="button white"
+							// href={donateLink}
+							// target="_blank"
+							// rel="noopener noreferrer"
+							href="#"
+							className="button white cv-button"
 						>
 							Donate Today
 						</a>
