@@ -267,7 +267,8 @@ const Map = () => {
 													<a
 														className="plat"
 														// href={staticPlatPath + location.address + ".pdf"}
-														href={`${staticPlatPath}${location.address.toLowerCase()}.pdf`}
+														//href={`${staticPlatPath}${location.address.toLowerCase()}.pdf`}
+														href="/map-location-plats/218 Perkins St.pdf"
 														// target="_blank"
 													>
 														View Plat
