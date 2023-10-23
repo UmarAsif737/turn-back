@@ -178,23 +178,6 @@ const Home = () => {
 				</div>
 			</section>
 			<Testimonials />
-			{/* <section className="home-section testimonials">
-				<div className="container">
-					<div className="content">
-						<div className="subheading-quote">
-							<span className="subheading">Lorem Ipsum</span>
-							<blockquote>
-								"Turn Back the Block helped me lorem ipsum dolar sit amet lorem
-								sit"
-							</blockquote>
-						</div>
-
-						<Link to="get-involved" className="button">
-							Get Involved
-						</Link>
-					</div>
-				</div>
-			</section> */}
 			<section className="home-section spotlight">
 				<div className="container">
 					<div className="left-content">
@@ -221,7 +204,7 @@ const Home = () => {
 						</button>
 					</div>
 					<div className="right-content">
-						<video controls poster={LadonnaImg}>
+						<video controls poster={LadonnaImg} preload="metadata">
 							<source
 								src="/Turn Back The Block - LaDonna.mp4"
 								type="video/mp4"

@@ -9,8 +9,6 @@ const Map = () => {
 	/////////////////
 
 	// Paths
-	//const locationImagePath = "src/components/map/locations/images/";
-	//const locationPlatPath = "src/components/map/locations/plats/";
 	const staticLocationImagePath = "/map-location-images/";
 	const staticPlatPath = "/map-location-plats/";
 
@@ -230,8 +228,6 @@ const Map = () => {
 						<div id="locations" ref={parentRef}>
 							{mapReady &&
 								locationData.locations.map((location, index) => {
-									const dynamicUrl = `${staticPlatPath}${location.address.toLowerCase()}.pdf`;
-									console.log("Dynamic URL:", dynamicUrl);
 									return (
 										<div
 											className={`single-location ${
@@ -252,9 +248,6 @@ const Map = () => {
 											<div className="image-container">
 												<StatusMarkerMobile status={location.status} />
 												<img
-													// src={
-													// 	staticLocationImagePath + location.address + ".jpg"
-													// }
 													src={`${staticLocationImagePath}${location.address}.jpg`}
 													alt={location.address}
 													loading="lazy"
@@ -266,13 +259,11 @@ const Map = () => {
 												</div>
 												<div className="address-container">
 													<p>{location.address}</p>
-													{location.status !== "owned" && (
+													{location.plat === true && (
 														<a
 															className="plat"
-															// href={staticPlatPath + location.address + ".pdf"}
 															href={`${staticPlatPath}${location.address}.pdf`}
-															//href="/map-location-plats/218 Perkins St.pdf"
-															// target="_blank"
+															target="_blank"
 														>
 															View Plat
 														</a>

@@ -3,180 +3,217 @@
 		{
 			"address": "621 Metcalf St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4818789,
 			"lng": -82.00186099999999
 		},
 		{
 			"address": "625 Metcalf St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4816808,
 			"lng": -82.0018173
 		},
 		{
 			"address": "627 Metcalf St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4815069,
 			"lng": -82.0018173
 		},
 		{
 			"address": "1590 Broad St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4820151,
 			"lng": -81.9867318
 		},
 		{
 			"address": "1596 Broad St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4820616,
 			"lng": -81.9868663
 		},
 		{
 			"address": "1602 Broad St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4821161,
 			"lng": -81.98703669999999
 		},
 		{
 			"address": "1606 Broad St",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.482173,
 			"lng": -81.987202
 		},
 		{
 			"address": "1922 Battle Row",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4824581,
 			"lng": -81.9983673
 		},
 		{
 			"address": "1963 Battle Row",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4825069,
 			"lng": -82.0003591
 		},
 		{
 			"address": "1980 Battle Row",
 			"status": "construction",
+			"plat": true,
 			"lat": 33.4819687,
 			"lng": -82.0015617
 		},
 		{
 			"address": "2014 Battle Row",
 			"status": "sold",
+			"plat": false,
 			"lat": 33.4816896,
 			"lng": -82.00262649999999
 		},
 		{
 			"address": "2017 Battle Row",
 			"status": "construction",
+			"plat": true,
 			"lat": 33.4821685,
 			"lng": -82.0025464
 		},
 		{
 			"address": "2030 Battle Row",
 			"status": "sold",
+			"plat": true,
 			"lat": 33.481426,
 			"lng": -82.003732
 		},
 		{
 			"address": "2046 Battle Row",
 			"status": "sold",
+			"plat": true,
 			"lat": 33.4810214,
 			"lng": -82.0043599
 		},
 		{
 			"address": "218 Perkins St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4820454,
 			"lng": -81.9887632
 		},
 		{
 			"address": "407 Harmon St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.481589,
 			"lng": -81.99103
 		},
 		{
 			"address": "1630 St. Luke St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.481762,
 			"lng": -81.9908899
 		},
 		{
 			"address": "1642 St. Luke St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.48192820000001,
 			"lng": -81.99133780000001
 		},
 		{
 			"address": "1644 St. Luke St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4819749,
 			"lng": -81.9913842
 		},
 		{
 			"address": "1733 Hicks St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4816165,
 			"lng": -81.9934263
 		},
 		{
 			"address": "1810 Hicks St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4820092,
 			"lng": -81.9953481
 		},
 		{
+			"address": "1830 Watkins St",
+			"status": "owned",
+			"plat": true,
+			"lat": 33.4796664,
+			"lng": -81.9998829
+		},
+		{
 			"address": "1919 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4828522,
 			"lng": -81.9984099
 		},
 		{
 			"address": "1923 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.482953,
 			"lng": -81.9986229
 		},
 		{
 			"address": "1927 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.483064,
 			"lng": -81.9990009
 		},
 		{
 			"address": "1929 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4831093,
 			"lng": -81.99909269999999
 		},
 		{
 			"address": "1941 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.483435,
 			"lng": -81.99991399999999
 		},
 		{
 			"address": "1943 Telfair St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.483503,
 			"lng": -82.00003339999999
 		},
 		{
 			"address": "1931 Watkins St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4814953,
 			"lng": -82.0009654
 		},
 		{
 			"address": "1933 Watkins St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.481601,
 			"lng": -82.0011871
 		},
 		{
 			"address": "2104 Millview St",
 			"status": "owned",
+			"plat": true,
 			"lat": 33.4820976,
 			"lng": -82.002882
 		}
