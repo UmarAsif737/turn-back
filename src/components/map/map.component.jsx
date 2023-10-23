@@ -229,55 +229,59 @@ const Map = () => {
 					<div id="locations-balancer">
 						<div id="locations" ref={parentRef}>
 							{mapReady &&
-								locationData.locations.map((location, index) => (
-									<div
-										className={`single-location ${
-											locationHovered === location.address ? "highlight" : ""
-										}`}
-										ref={(el) => (locationRef.current[index] = el)}
-										onMouseEnter={() =>
-											handleMouseEnter(
-												location.address,
-												location.lat,
-												location.lng,
-												index
-											)
-										}
-										onMouseLeave={handleMouseLeave}
-										key={location.address}
-									>
-										<div className="image-container">
-											<StatusMarkerMobile status={location.status} />
-											<img
-												// src={
-												// 	staticLocationImagePath + location.address + ".jpg"
-												// }
-												src={`${staticLocationImagePath}${location.address}.jpg`}
-												alt={location.address}
-												loading="lazy"
-											/>
-										</div>
-										<div className="info-container">
-											<div className="status-container">
-												<StatusMarker status={location.status} />
+								locationData.locations.map((location, index) => {
+									const dynamicUrl = `${staticPlatPath}${location.address.toLowerCase()}.pdf`;
+									console.log("Dynamic URL:", dynamicUrl);
+									return (
+										<div
+											className={`single-location ${
+												locationHovered === location.address ? "highlight" : ""
+											}`}
+											ref={(el) => (locationRef.current[index] = el)}
+											onMouseEnter={() =>
+												handleMouseEnter(
+													location.address,
+													location.lat,
+													location.lng,
+													index
+												)
+											}
+											onMouseLeave={handleMouseLeave}
+											key={location.address}
+										>
+											<div className="image-container">
+												<StatusMarkerMobile status={location.status} />
+												<img
+													// src={
+													// 	staticLocationImagePath + location.address + ".jpg"
+													// }
+													src={`${staticLocationImagePath}${location.address}.jpg`}
+													alt={location.address}
+													loading="lazy"
+												/>
 											</div>
-											<div className="address-container">
-												<p>{location.address}</p>
-												{location.status !== "owned" && (
-													<a
-														className="plat"
-														// href={staticPlatPath + location.address + ".pdf"}
-														//href={`${staticPlatPath}${location.address.toLowerCase()}.pdf`}
-														href="/map-location-plats/218 Perkins St.pdf"
-														// target="_blank"
-													>
-														View Plat
-													</a>
-												)}
+											<div className="info-container">
+												<div className="status-container">
+													<StatusMarker status={location.status} />
+												</div>
+												<div className="address-container">
+													<p>{location.address}</p>
+													{location.status !== "owned" && (
+														<a
+															className="plat"
+															// href={staticPlatPath + location.address + ".pdf"}
+															//href={`${staticPlatPath}${location.address.toLowerCase()}.pdf`}
+															href="/map-location-plats/218 Perkins St.pdf"
+															// target="_blank"
+														>
+															View Plat
+														</a>
+													)}
+												</div>
 											</div>
 										</div>
-									</div>
-								))}
+									);
+								})}
 						</div>
 					</div>
 				</div>
