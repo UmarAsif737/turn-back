@@ -147,6 +147,8 @@ const Map = () => {
 
 	const [locationHovered, setLocationHovered] = useState(null);
 	const markerRef = useRef([]);
+	const locationRef = useRef([]);
+	const parentRef = useRef();
 
 	const handleMouseEnter = (address, lat, lng, index) => {
 		setLocationHovered(address);
@@ -180,6 +182,25 @@ const Map = () => {
 		if (parentDiv) {
 			parentDiv.style.zIndex = "3";
 		}
+
+		// Find the index of the location with the given address.
+		const index = locationData.locations.findIndex(
+			(loc) => loc.address === address
+		);
+
+		// Scroll the corresponding location into view within its parent.
+		if (index !== -1 && locationRef.current[index]) {
+			const container = parentRef.current;
+			if (container) {
+				const elementToScroll = locationRef.current[index];
+				const elementTop = elementToScroll.offsetTop;
+
+				container.scrollTo({
+					top: elementTop,
+					behavior: "smooth",
+				});
+			}
+		}
 	};
 
 	const handleMouseLeaveMarker = (event) => {
@@ -206,13 +227,14 @@ const Map = () => {
 			<section id="map-module">
 				<div id="locations-container">
 					<div id="locations-balancer">
-						<div id="locations">
+						<div id="locations" ref={parentRef}>
 							{mapReady &&
 								locationData.locations.map((location, index) => (
 									<div
 										className={`single-location ${
 											locationHovered === location.address ? "highlight" : ""
 										}`}
+										ref={(el) => (locationRef.current[index] = el)}
 										onMouseEnter={() =>
 											handleMouseEnter(
 												location.address,
@@ -270,7 +292,7 @@ const Map = () => {
 						{mapReady &&
 							locationData.locations.map((coord, index) => (
 								<Marker
-									key={coord.lat}
+									key={coord.address}
 									lat={coord.lat}
 									lng={coord.lng}
 									status={coord.status}
