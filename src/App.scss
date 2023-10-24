@@ -5,6 +5,23 @@
 	background: white;
 }
 
+$time: 1000ms;
+
 h1 {
 	color: black;
+}
+
+.fade-enter {
+	opacity: 0;
+}
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity $time;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-exit-active {
+	opacity: 0;
+	transition: opacity $time;
 }
