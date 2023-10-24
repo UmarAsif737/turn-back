@@ -169,7 +169,7 @@ const Home = () => {
 							<div className="calendar-container">
 								<i className="fa-thin fa-calendar-days calendar-icon"></i>
 								<div className="calendar-information">
-									<span>Sat, June 10 • 10am</span>
+									<span>Sat, Jan 13th • 10am</span>
 									<span>1924 Battle Row • Augusta, GA</span>
 								</div>
 							</div>

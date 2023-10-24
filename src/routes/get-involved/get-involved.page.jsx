@@ -41,17 +41,17 @@ const GetInvolved = () => {
 							<div id="schedule-container">
 								<h3>Upcoming Events</h3>
 								<div id="schedule">
-									{/* <p className="date">Oct 1</p>
-									<p className="event">
-										<span>Block Party</span> <span>-</span> 9:30-11:30 am <br />{" "}
-										located at 1924 Battle Row
-										<br />
-									</p> */}
 									<p className="date">Oct 28</p>
 									<p className="event">
 										<span>Halloween Trunk or Treat</span> <span>|</span>{" "}
 										5:30-6:30 pm <br />
 										located across from the TBTB office / warehouse
+										<br />
+									</p>
+									<p className="date">Jan 13th</p>
+									<p className="event">
+										<span>Block Party</span> <span>-</span> 10:00 am-12:00 pm{" "}
+										<br /> located at 1924 Battle Row
 										<br />
 									</p>
 									{/* <p className="date">Nov 9</p>
