@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined.svg";
+import Logo from "../../assets/Turn-Back-The-Block-Logo-Outlined-Two.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import "./header.styles.scss";
 
 const Header = () => {
-	// Donation link
-	const donateLink =
-		"https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=NESTQKKMSGQHA";
 	// Define location and assign <Link> the class of "active-link" for styling current route.
 	const location = useLocation();
 	const getLink = (path) => {
@@ -64,6 +61,34 @@ const Header = () => {
 		};
 	}, []);
 
+	// Return to top
+	const arrowRef = useRef(null);
+
+	const handleReturn = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+
+	const returnToTop = () => {
+		const returnArrow = arrowRef.current;
+		if (window.scrollY <= 200) {
+			returnArrow.classList.add("return-hidden");
+		} else {
+			returnArrow.classList.remove("return-hidden");
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", returnToTop);
+
+		// Cleanup function
+		return () => {
+			window.removeEventListener("scroll", returnToTop);
+		};
+	}, []);
+
 	return (
 		<>
 			<header>
@@ -74,9 +99,6 @@ const Header = () => {
 					<div id="mobile-menu-container">
 						<div id="mobile-sub-menu">
 							<a
-								// href={donateLink}
-								// target="_blank"
-								// rel="noopener noreferrer"
 								href="#"
 								className="cv-button"
 								id="mobile-donate"
@@ -157,9 +179,6 @@ const Header = () => {
 							<ul id="sub-menu-items" className="desktop">
 								<li>
 									<a
-										// href={donateLink}
-										// target="_blank"
-										// rel="noopener noreferrer"
 										href="#"
 										className="cv-button"
 										id="donate"
@@ -178,6 +197,9 @@ const Header = () => {
 					</nav>
 				</div>
 			</header>
+			<div id="return" ref={arrowRef} onClick={handleReturn}>
+				<i class="fa-sharp fa-regular fa-angle-up"></i>
+			</div>
 		</>
 	);
 };

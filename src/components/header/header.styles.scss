@@ -24,7 +24,7 @@ header {
 			position: relative;
 			flex-grow: 0;
 			flex-shrink: 1;
-			transform: translateY(clamp(5px, 0.3vw, 0.3vw));
+			transform: translateY(clamp(5px, 0.36vw, 0.36vw));
 			z-index: 420;
 			width: clamp(110px, 10vw, 10vw);
 
@@ -316,5 +316,37 @@ header {
 
 		@include respond-to(360px) {
 		}
+	}
+}
+
+#return {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 2px solid $red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $white;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	z-index: 99;
+
+	&:hover > i {
+		transform: translateY(-2px);
+	}
+
+	&.return-hidden {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	i {
+		font-size: 25px;
+		color: $red;
+		transition: transform 0.2s ease-out;
 	}
 }
