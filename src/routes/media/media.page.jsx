@@ -7,7 +7,6 @@ import "./media.styles.scss";
 
 const Media = () => {
 	// image path
-	//const mediaImagePath = "src/routes/media/components/single/images/";
 	const staticImagePath = "./media-page-images/";
 
 	//handle lightbox
@@ -15,16 +14,21 @@ const Media = () => {
 	const [folder, setFolder] = useState("");
 	const [showLightbox, setShowLightbox] = useState(false);
 	const lightbox = useRef(null);
+	const hideCTA = useRef(null);
 	const handleOpen = (media) => {
 		setFolder(media.folder);
 		const newImages = mediaImageMap[media.folder];
 		setImages(newImages);
 		setShowLightbox(true);
+		const ctaElement = hideCTA.current;
+		ctaElement.classList.add("hide-cta");
 	};
 	const handleClose = () => {
 		setImages([]);
 		setCurrentIndex(0);
 		setShowLightbox(false);
+		const ctaElement = hideCTA.current;
+		ctaElement.classList.remove("hide-cta");
 	};
 	useEffect(() => {
 		if (showLightbox) {
@@ -69,17 +73,23 @@ const Media = () => {
 					className="container"
 					style={{ display: showLightbox ? "none" : "grid" }}
 				>
-					{mediaData.map((media) => (
-						<Single
-							key={media.title}
-							image={`${staticImagePath}${media.folder}/${
-								mediaImageMap[media.folder][0]
-							}`}
-							title={media.title}
-							date={media.date}
-							onClick={() => handleOpen(media)}
-						/>
-					))}
+					{mediaData
+						.sort((a, b) => {
+							const dateA = new Date(a.date.replace(" ", " 1, "));
+							const dateB = new Date(b.date.replace(" ", " 1, "));
+							return dateB - dateA; // for descending order
+						})
+						.map((media) => (
+							<Single
+								key={media.title}
+								image={`${staticImagePath}${media.folder}/${
+									mediaImageMap[media.folder][0]
+								}`}
+								title={media.title}
+								date={media.date}
+								onClick={() => handleOpen(media)}
+							/>
+						))}
 				</div>
 
 				<section
@@ -133,7 +143,9 @@ const Media = () => {
 					</div>
 				</section>
 			</section>
-			<CTA />
+			<section id="hide-cta" ref={hideCTA}>
+				<CTA />
+			</section>
 		</>
 	);
 };
