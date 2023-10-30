@@ -42,7 +42,6 @@
 		<!-- PRE-APPLICATION FORM on APPLY PAGE -->
 		<form
 			name="pre-application"
-			method="post"
 			netlify
 			netlify-honeypot="bot-field"
 			hidden
@@ -131,103 +130,50 @@
 		<!-- VOLUNTEER FORM on GET INVOLVED PAGE -->
 		<form 
 			name="volunteer"
-			method="post"
 			netlify
 			netlify-honeypot="bot-field"
 			hidden
 		>
-			<label>
-				Applicant Full Name
-				<span className="required">*</span>
-				<input type="text" name="primary-name" required />
-			</label>
-			<label>
-				Guardian Full Name
-				<span className="thin">
-					(If Applicant is Under 18 yrs old)
-				</span>
-				<input type="text" name="secondary-name" />
-			</label>
-			<label>
-				Street Address
-				<span className="required">*</span>
-				<input type="text" name="address" required />
-			</label>
-			<label>
-				City
-				<span className="required">*</span>
-				<input type="text" name="city" required />
-			</label>
-			<label>
-				State
-				<span className="required">*</span>
-				<input
-					type="text"
-					name="state"
-					defaultValue="GA"
-					minLength="2"
-					maxLength="2"
-					required
-				/>
-			</label>
-			<label>
-				Zipcode
-				<span className="required">*</span>
-				<input
-					type="text"
-					name="zipcode"
-					pattern="[0-9]{5}"
-					minLength="5"
-					maxLength="5"
-					required
-				/>
-			</label>
-			<label>
-				Phone Number
-				<span className="required">*</span>
-				<input type="tel" name="phone" required />
-			</label>
-			<label>
-				Email Address
-				<span className="required">*</span>
-				<input type="email" name="email" required />
-			</label>
-			<div className="checkbox-container">
-				<input type="checkbox" id="previously" />
-				<label htmlFor="previously">
-					I have volunteered with Turn Back the Block
-				</label>
-			</div>
-			<div className="checkbox-container">
-				<input type="checkbox" id="understand" />
-				<label htmlFor="understand">
-					I have read and understand the Volunteer Conduct Agreement and agree to abide by it
-					<span className="required">*</span>
-				</label>
-			</div>
-			<label>
-				How did you hear about the program?
-				<span className="required">*</span>
-				<select
-					name="hear-about"
-					required
-				>
-					<option>Website</option>
-					<option>Social Media</option>
-					<option>Signage</option>
-					<option>Friend / Family</option>
-				</select>
-			</label>
-			<label id="referral">
-				Friend's or Family's name:
-				<input type="text" name="referrer" />
-			</label>
-			<input
-				className="button red"
-				type="submit"
-				value="Sign Up"
-				role="button"
-			/>
+		<input type="text" name="primary-name" required />
+		<input type="text" name="secondary-name" />
+		<input type="text" name="address" required />
+		<input type="text" name="city" required />
+		<input
+			type="text"
+			name="state"
+			defaultValue="GA"
+			minLength="2"
+			maxLength="2"
+			required
+		/>
+		<input
+			type="text"
+			name="zipcode"
+			pattern="[0-9]{5}"
+			minLength="5"
+			maxLength="5"
+			required
+		/>
+		<input type="tel" name="phone" required />
+		<input type="email" name="email" required />
+		<input type="checkbox" id="previously" />
+		<input type="checkbox" id="understand" />
+		<select
+			name="hear-about"
+			required
+		>
+			<option>Website</option>
+			<option>Social Media</option>
+			<option>Signage</option>
+			<option>Friend / Family</option>
+		</select>
+		<input type="text" name="referrer" />
+		<input
+			className="button red"
+			type="submit"
+			value="Sign Up"
+			role="button"
+		/>
 		</form>
 
 		<!-- END FORMS -->
