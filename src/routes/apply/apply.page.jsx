@@ -115,7 +115,7 @@ const Apply = () => {
 						<form
 							className={`${isOpen.third ? "open" : ""}`}
 							name="preapplication-form"
-							method="post"
+							method="POST"
 						>
 							<input
 								type="hidden"

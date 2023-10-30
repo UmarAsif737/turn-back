@@ -77,7 +77,7 @@ const GetInvolved = () => {
 								Internship Opportunities and more — sign up below for more
 								information on how you can help us create change:
 							</p>
-							<form name="volunteer-form" method="post">
+							<form name="volunteer-form" method="POST">
 								<input type="hidden" name="form-name" value="volunteer-form" />
 								<label>
 									Applicant Full Name<span className="required">*</span>
