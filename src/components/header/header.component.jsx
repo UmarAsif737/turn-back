@@ -188,7 +188,7 @@ const Header = () => {
 									</a>
 								</li>
 								<li>
-									<Link to="test" id="volunteer">
+									<Link to="get-involved" id="volunteer">
 										Volunteer
 									</Link>
 								</li>
@@ -198,7 +198,7 @@ const Header = () => {
 				</div>
 			</header>
 			<div id="return" ref={arrowRef} onClick={handleReturn}>
-				<i className="fa-sharp fa-regular fa-angle-up"></i>
+				<i class="fa-sharp fa-regular fa-angle-up"></i>
 			</div>
 		</>
 	);

@@ -41,84 +41,41 @@
 
 		<!-- PRE-APPLICATION FORM on APPLY PAGE -->
 		<form
-			name="pre-application"
+			name="preapplication-form"
 			netlify
 			netlify-honeypot="bot-field"
 			hidden
 			>
-			<p>To apply, please submit your pre-application below:</p>
-			<label>
-				Primary Applicant Name
-				<span className="required">*</span>
-				<input type="text" name="primary-name" required />
-			</label>
-			<label>
-				Secondary Applicant Name
-				<input type="text" name="secondary-name" />
-			</label>
-			<label>
-				Current Street Address
-				<span className="required">*</span>
-				<input type="text" name="address" required />
-			</label>
-			<label>
-				City
-				<span className="required">*</span>
-				<input type="text" name="city" required />
-			</label>
-			<label>
-				State
-				<span className="required">*</span>
-				<input
-					type="text"
-					name="state"
-					defaultValue="GA"
-					minLength="2"
-					maxLength="2"
-					required
-				/>
-			</label>
-			<label>
-				Zipcode
-				<span className="required">*</span>
-				<input
-					type="text"
-					name="zipcode"
-					pattern="[0-9]{5}"
-					minLength="5"
-					maxLength="5"
-					required
-				/>
-			</label>
-			<label>
-				Phone Number
-				<span className="required">*</span>
-				<input type="tel" name="phone" required />
-			</label>
-			<label>
-				Email Address
-				<span className="required">*</span>
-				<input type="email" name="email" required />
-			</label>
-			<label>
-				Current Employer
-				<span className="required">*</span>
-				<input type="text" name="employer" required />
-			</label>
-			<label>
-				How did you hear about the program?
-				<span className="required">*</span>
-				<select name="hear-about">
-					<option>Website</option>
-					<option>Social Media</option>
-					<option>Signage</option>
-					<option>Friend / Family</option>
-				</select>
-			</label>
-			<label id="referral">
-				Friend's or Family's name:
-				<input type="text" name="referrer" />
-			</label>
+			<input type="text" name="primary-name" required />
+			<input type="text" name="secondary-name" />
+			<input type="text" name="address" required />
+			<input type="text" name="city" required />
+			<input
+				type="text"
+				name="state"
+				defaultValue="GA"
+				minLength="2"
+				maxLength="2"
+				required
+			/>
+			<input
+				type="text"
+				name="zipcode"
+				pattern="[0-9]{5}"
+				minLength="5"
+				maxLength="5"
+				required
+			/>
+			<input type="tel" name="phone" required />
+			<input type="email" name="email" required />
+			<input type="text" name="employer" required />
+			<select name="hear-about">
+				<option>Website</option>
+				<option>Social Media</option>
+				<option>Signage</option>
+				<option>Friend / Family</option>
+			</select>
+			<input type="text" name="referrer" />
 			<input
 				className="button red"
 				type="submit"

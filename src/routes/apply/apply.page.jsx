@@ -114,13 +114,13 @@ const Apply = () => {
 
 						<form
 							className={`${isOpen.third ? "open" : ""}`}
-							name="pre-application"
+							name="preapplication-form"
 							method="post"
 						>
 							<input
 								type="hidden"
-								name="pre-application-netlify-input"
-								value="pre-application"
+								name="form-name"
+								value="preapplication-form"
 							/>
 							<p>To apply, please submit your pre-application below:</p>
 							<label>
