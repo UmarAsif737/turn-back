@@ -163,7 +163,7 @@ const GetInvolved = () => {
 									<select
 										name="hear-about"
 										required
-										onChange={handleInputChange}
+										// onChange={handleInputChange}
 									>
 										<option>Website</option>
 										<option>Social Media</option>
@@ -171,12 +171,16 @@ const GetInvolved = () => {
 										<option>Friend / Family</option>
 									</select>
 								</label>
-								{heard === "Friend / Family" && (
+								<label id="referral">
+									Friend's or Family's name:
+									<input type="text" name="referrer" />
+								</label>
+								{/* {heard === "Friend / Family" && (
 									<label id="referral">
 										Friend's or Family's name:
 										<input type="text" name="referrer" />
 									</label>
-								)}
+								)} */}
 
 								<input
 									className="button red"

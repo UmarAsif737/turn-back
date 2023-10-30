@@ -263,6 +263,10 @@
 							background: $light-gray;
 						}
 
+						.thin {
+							font-weight: 400;
+						}
+
 						&:nth-of-type(1) {
 							grid-column: 1 / 5;
 						}
