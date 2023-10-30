@@ -10,7 +10,7 @@ const Instagram = () => {
 		const userId = "6521114397999561"; // Replace with your Instagram User ID
 		try {
 			const response = await axios.get(
-				`https://graph.instagram.com/${userId}/media?fields=id,caption,media_url,media_type,thumbnail_url,permalink&access_token=${longLivedToken}&limit=5`
+				`https://graph.instagram.com/${userId}/media?fields=id,caption,media_url,media_type,thumbnail_url,permalink,children{media_url,media_type}&access_token=${longLivedToken}&limit=5`
 			);
 			setPosts(response.data.data);
 		} catch (error) {
@@ -53,6 +53,22 @@ const Instagram = () => {
 									)}
 									{post.media_type === "VIDEO" && (
 										<img src={post.thumbnail_url} alt={post.caption} />
+									)}
+									{post.media_type === "CAROUSEL_ALBUM" && (
+										<>
+											{post.children.data[0].media_type === "IMAGE" && (
+												<img
+													src={post.children.data[0].media_url}
+													alt={post.caption}
+												/>
+											)}
+											{post.children.data[0].media_type === "VIDEO" && (
+												<img
+													src={post.children.data[0].thumbnail_url}
+													alt={post.caption}
+												/>
+											)}
+										</>
 									)}
 								</a>
 							</div>
