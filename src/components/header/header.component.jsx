@@ -188,7 +188,7 @@ const Header = () => {
 									</a>
 								</li>
 								<li>
-									<Link to="get-involved" id="volunteer">
+									<Link to="test" id="volunteer">
 										Volunteer
 									</Link>
 								</li>
