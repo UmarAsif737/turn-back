@@ -1,13 +1,13 @@
-//import { useState } from "react";
+import { useState } from "react";
 import OurMission from "../../assets/our-mission.jpg";
-//import conductForm from "../../assets/Volunteer Conduct Form.pdf";
+import conductForm from "../../assets/Volunteer Conduct Form.pdf";
 import "./get-involved.styles.scss";
 
 const GetInvolved = () => {
-	// const [heard, setHeard] = useState("");
-	// const handleInputChange = (e) => {
-	// 	setHeard(e.target.value);
-	// };
+	const [heard, setHeard] = useState("");
+	const handleInputChange = (e) => {
+		setHeard(e.target.value);
+	};
 	return (
 		<>
 			<section id="get-involved-section">
@@ -137,14 +137,14 @@ const GetInvolved = () => {
 								<div className="checkbox-container">
 									<input type="checkbox" id="understand" />
 									<label htmlFor="understand">
-										{/* I have read and understand the{" "} */}
-										{/* <a
+										I have read and understand the{" "}
+										<a
 											href={conductForm}
 											target="_blank"
 											rel="noopener noreferrer"
 										>
 											Volunteer Conduct Agreement
-										</a>{" "} */}
+										</a>{" "}
 										and agree to abide by it<span className="required">*</span>
 									</label>
 								</div>
