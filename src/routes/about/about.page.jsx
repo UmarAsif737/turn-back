@@ -102,7 +102,7 @@ const About = () => {
 			<main id="about-history">
 				<div id="history-container" className="container">
 					<div className="heading-container">
-						<span className="subheading">Lorem Ipsum</span>
+						<span className="subheading">Since 2010</span>
 						<h2 className="heading">Our History</h2>
 					</div>
 					<div id="article-container">
@@ -206,7 +206,7 @@ const About = () => {
 			<section id="about-board">
 				<div className="container">
 					<div className="heading-container">
-						<span className="subheading">Lorem Ipsum</span>
+						<span className="subheading">Who We Are</span>
 						<h2 className="heading">Meet Our Board</h2>
 					</div>
 					<div id="board-container">

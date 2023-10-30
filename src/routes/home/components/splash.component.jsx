@@ -73,7 +73,7 @@ const Splash = () => {
 							stood.
 						</p>
 						<div id="splash-button-container">
-							<Link to="get-involved" className="button white">
+							<Link to="projects" className="button white">
 								View Our Projects
 							</Link>
 							<Link to="about" className="button red">
