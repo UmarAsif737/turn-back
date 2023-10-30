@@ -5,7 +5,7 @@ const TestForm = () => {
 				<input type="hidden" name="form-name" value="test-form" />
 				<label>
 					Primary Applicant Name<span className="required">*</span>
-					<input type="text" name="primary-name" required />
+					<input type="text" name="email" required />
 				</label>
 
 				<input

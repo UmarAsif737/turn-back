@@ -81,7 +81,12 @@ const GetInvolved = () => {
 								Internship Opportunities and more — sign up below for more
 								information on how you can help us create change:
 							</p>
-							<form name="pre-application" method="post">
+							<form name="volunteer" method="post">
+								<input
+									type="hidden"
+									name="volunteer-netlify-input"
+									value="volunteer"
+								/>
 								<label>
 									Applicant Full Name<span className="required">*</span>
 									<input type="text" name="primary-name" required />
