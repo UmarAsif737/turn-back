@@ -86,7 +86,7 @@ const GetInvolved = () => {
 								<label>
 									Guardian Full Name
 									<span className="thin">
-										{/* (If Applicant is Under 18 yrs old) */}
+										(If Applicant is Under 18 yrs old)
 									</span>
 									<input type="text" name="secondary-name" />
 								</label>
@@ -162,10 +162,6 @@ const GetInvolved = () => {
 										<option>Signage</option>
 										<option>Friend / Family</option>
 									</select>
-								</label>
-								<label id="referral">
-									Friend's or Family's name:
-									<input type="text" name="referrer" />
 								</label>
 								{heard === "Friend / Family" && (
 									<label id="referral">
