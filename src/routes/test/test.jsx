@@ -16,8 +16,8 @@ const TestForm = () => {
 				></input>
 			</form> */}
 
-			<form name="shared-name" method="post">
-				<input type="hidden" name="form-name" value="shared-name" />
+			<form name="volunteer-form" method="post">
+				<input type="hidden" name="form-name" value="volunteer-form" />
 				<label>
 					Applicant Full Name<span className="required">*</span>
 					<input type="text" name="primary-name" required />
