@@ -198,7 +198,7 @@ const Header = () => {
 				</div>
 			</header>
 			<div id="return" ref={arrowRef} onClick={handleReturn}>
-				<i class="fa-sharp fa-regular fa-angle-up"></i>
+				<i className="fa-sharp fa-regular fa-angle-up"></i>
 			</div>
 		</>
 	);

@@ -113,7 +113,8 @@ const Apply = () => {
 						</div>
 
 						<form
-							className={`${isOpen.third ? "open" : ""}`}
+							// className={`${isOpen.third ? "open" : ""}`}
+							className="open"
 							name="pre-application"
 							method="post"
 						>
@@ -171,19 +172,24 @@ const Apply = () => {
 							<label>
 								How did you hear about the program?
 								<span className="required">*</span>
-								<select name="hear-about" required onChange={handleInputChange}>
+								{/* <select name="hear-about" required onChange={handleInputChange}> */}
+								<select name="hear-about" required>
 									<option>Website</option>
 									<option>Social Media</option>
 									<option>Signage</option>
 									<option>Friend / Family</option>
 								</select>
 							</label>
-							{heard === "Friend / Family" && (
+							<label id="referral">
+								Friend's or Family's name:
+								<input type="text" name="referrer" />
+							</label>
+							{/* {heard === "Friend / Family" && (
 								<label id="referral">
 									Friend's or Family's name:
 									<input type="text" name="referrer" />
 								</label>
-							)}
+							)} */}
 
 							<input
 								className="button red"

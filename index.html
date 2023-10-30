@@ -36,6 +36,19 @@
 		></script>
 	</head>
 	<body>
+		<form className="open" name="test-form" method="post" netlify netlify-honeypot="bot-field" hidden>
+			<label>
+				Primary Applicant Name<span className="required">*</span>
+				<input type="text" name="primary-name" required />
+			</label>
+			<input
+				className="button red"
+				type="submit"
+				value="Submit"
+				role="button"
+			></input>
+		</form>
+
 		<div id="root"></div>
 		<script type="module" src="/src/main.jsx"></script>
 		<script type="text/javascript">
