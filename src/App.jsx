@@ -15,9 +15,6 @@ import Apply from "./routes/apply/apply.page";
 import GetInvolved from "./routes/get-involved/get-involved.page";
 import Projects from "./routes/projects/projects.page";
 import Media from "./routes/media/media.page";
-
-import TestForm from "./routes/test/test";
-
 import "./App.scss";
 
 const AppRoutes = () => {
@@ -32,7 +29,6 @@ const AppRoutes = () => {
 					<Route path="get-involved" element={<GetInvolved />} />
 					<Route path="projects" element={<Projects />} />
 					<Route path="media" element={<Media />} />
-					<Route path="test" element={<TestForm />} />
 				</Routes>
 			</CSSTransition>
 		</TransitionGroup>
