@@ -30,14 +30,8 @@ This is because `Image` & `Plat` mapping is done by concatenating the `Address` 
 
 Within the `Map` component you'll find a `locations` folder that contains a `generateCoordinates` script. When an address or two is added, grabbing the `lat` and `lng` data from a google map search is fine, but when dealing with bulk addresses, you can run this script to get their corresponding coordinate data. Then I just give ChatGPT the location data and the coordinate data and tell it to match them up 1:1.
 
-# More
+# Todo
 
-# form validation and processing
-
-# instagram token refresh script
-
-# error handling
-
-# match logo colors
-
-# probably turn events into json map
+Automatic instagram token authentication script.
+Error handling
+Probably turn events into a JSON map.
