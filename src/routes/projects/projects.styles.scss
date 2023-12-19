@@ -1,178 +1,203 @@
 @import "../../_global.styles";
 
 #projects-section {
-	width: 100%;
+  width: 100%;
 
-	p {
-		color: $black;
-	}
-	#projects-container {
-		width: clamp($tablet, 70vw, 70vw);
-		margin: 0 auto;
-		padding: 20px;
-		margin-top: 60px;
+  p {
+    color: $black;
+  }
+  #projects-container {
+    width: clamp($tablet, 70vw, 70vw);
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 60px;
 
-		@include respond-to($tablet) {
-			margin-top: 40px;
-			width: 100%;
-		}
+    @include respond-to($tablet) {
+      margin-top: 40px;
+      width: 100%;
+    }
 
-		@include respond-to($mobile) {
-			margin-top: 20px;
-		}
+    @include respond-to($mobile) {
+      margin-top: 20px;
+    }
 
-		.project {
-			display: flex;
-			gap: 4vw;
-			align-items: center;
-			margin-top: 60px;
+    .project {
+      display: flex;
+      gap: 4vw;
+      align-items: center;
+      margin-top: 60px;
 
-			@include respond-to($tablet) {
-				margin-top: 40px;
-				margin-bottom: 80px;
-			}
+      @include respond-to($tablet) {
+        margin-top: 40px;
+        margin-bottom: 80px;
+      }
 
-			@include respond-to($mobile) {
-				margin-top: 40px;
-				margin-bottom: 60px;
-			}
+      @include respond-to($mobile) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
 
-			.content-container,
-			.image-container {
-				position: relative;
-				width: 50%;
+      .content-container,
+      .image-container {
+        position: relative;
+        width: 50%;
 
-				@include respond-to($tablet) {
-					width: 100%;
-				}
-			}
+        @include respond-to($tablet) {
+          width: 100%;
+        }
+      }
 
-			.content-container {
-				display: flex;
-				flex-direction: column;
-				gap: 1.5vw;
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
 
-				@include respond-to($tablet) {
-					gap: clamp(20px, 3vw, 3vw);
-				}
-				#accordion-button {
-					border: none;
-					background: 0;
-					padding: 4px 4px 4px 0;
-					text-transform: uppercase;
-					color: $black;
-					text-decoration: underline;
-					text-underline-offset: 2px;
-					font-family: $mont;
-					align-self: flex-start;
-					cursor: pointer;
-					display: block;
-				}
+        @include respond-to($tablet) {
+          gap: clamp(20px, 3vw, 3vw);
+        }
+        #accordion-button {
+          border: none;
+          background: 0;
+          padding: 4px 4px 4px 0;
+          text-transform: uppercase;
+          color: $black;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          font-family: $mont;
+          align-self: flex-start;
+          cursor: pointer;
+          display: block;
+        }
 
-				#read-more {
-					display: block;
-					max-height: 0;
-					height: auto;
-					overflow: hidden;
-					transition: max-height 0.2s linear;
-					will-change: max-height;
+        #read-more {
+          display: block;
+          max-height: 0;
+          height: auto;
+          overflow: hidden;
+          transition: max-height 0.2s linear;
+          will-change: max-height;
 
-					@include respond-to($tablet) {
-						margin-bottom: -25px;
-					}
+          @include respond-to($tablet) {
+            margin-bottom: -25px;
+          }
 
-					&.open-accordion {
-						max-height: 9999px;
-						margin-bottom: 20px;
-					}
-				}
+          &.open-accordion {
+            max-height: 9999px;
+            margin-bottom: 20px;
+          }
+        }
 
-				.heading-container {
-					.subheading {
-						font-family: $mont;
-						font-size: clamp(14px, 0.8vw, 1vw);
-						font-weight: 700;
-						color: $red;
-						text-transform: uppercase;
-					}
-					.heading {
-						font-family: $mont;
-						font-size: clamp(26px, 2vw, 2vw);
-						font-weight: 600;
-						color: $black;
-						line-height: 1.2;
-						margin-top: 5px;
-						.red-heading {
-							color: $red;
-							font-weight: 700;
-						}
-					}
-				}
-				.text-content {
-					font-size: 16px;
-					color: $black;
-				}
-			}
+        .heading-container {
+          .subheading {
+            font-family: $mont;
+            font-size: clamp(14px, 0.8vw, 1vw);
+            font-weight: 700;
+            color: $red;
+            text-transform: uppercase;
+          }
+          .heading {
+            font-family: $mont;
+            font-size: clamp(26px, 2vw, 2vw);
+            font-weight: 600;
+            color: $black;
+            line-height: 1.2;
+            margin-top: 5px;
+            .red-heading {
+              color: $red;
+              font-weight: 700;
+            }
+          }
+        }
+        .text-content {
+          font-size: 16px;
+          color: $black;
+        }
+      }
 
-			.image-container {
-				position: relative;
-				height: clamp(275px, 25vw, 25vw);
+      .image-container {
+        position: relative;
+        height: clamp(275px, 25vw, 25vw);
 
-				@include respond-to($tablet) {
-					height: 60vw;
-				}
+        @include respond-to($tablet) {
+          height: 60vw;
+        }
 
-				.single-image {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					img {
-						position: relative;
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						object-position: center center;
-					}
-				}
-				.image-arrows {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					display: flex;
-					justify-content: space-between;
-					z-index: 9;
-					.left-arrow,
-					.right-arrow {
-						height: 100%;
-						width: auto;
-						display: flex;
-						align-items: center;
+        .single-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          img,
+          video {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
 
-						i {
-							font-size: 30px;
-							padding: 0 10px;
-							cursor: pointer;
-						}
-					}
-				}
-			}
-		}
-		#project-one {
-			@include respond-to($tablet) {
-				flex-direction: column-reverse;
-			}
-		}
-		#project-two {
-			flex-direction: row-reverse;
-			margin-bottom: 60px;
-			@include respond-to($tablet) {
-				flex-direction: column-reverse;
-			}
-			@include respond-to($mobile) {
-				margin-bottom: 20px;
-			}
-		}
-	}
+        .left-arrow {
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+        .right-arrow {
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+        .left-arrow,
+        .right-arrow {
+          position: absolute;
+          z-index: 9;
+          width: auto;
+
+          i {
+            font-size: 30px;
+            padding: 0 10px;
+            cursor: pointer;
+          }
+        }
+        // .image-arrows {
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 100%;
+        //   display: flex;
+        //   justify-content: space-between;
+        //   z-index: 9;
+        //   background: red;
+        //   .left-arrow,
+        //   .right-arrow {
+        //     height: 100%;
+        //     width: auto;
+        //     display: flex;
+        //     align-items: center;
+
+        //     i {
+        //       font-size: 30px;
+        //       padding: 0 10px;
+        //       cursor: pointer;
+        //     }
+        //   }
+        // }
+      }
+    }
+    #project-one {
+      @include respond-to($tablet) {
+        flex-direction: column-reverse;
+      }
+    }
+    #project-two {
+      flex-direction: row-reverse;
+      margin-bottom: 60px;
+      @include respond-to($tablet) {
+        flex-direction: column-reverse;
+      }
+      @include respond-to($mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
