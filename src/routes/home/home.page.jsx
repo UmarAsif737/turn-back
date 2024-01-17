@@ -128,7 +128,7 @@ const Home = () => {
 							<span className="subheading">Homes renovated</span>
 						</div>
 						<div className="number">
-							<span className="counter" data-target="07">
+							<span className="counter" data-target="09">
 								0
 							</span>
 							<span className="subheading">Homes constructed</span>

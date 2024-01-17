@@ -44,7 +44,7 @@ const GetInvolved = () => {
 										located across from the TBTB office / warehouse
 										<br />
 									</p> */}
-									<p className="date">Jan 13th</p>
+									<p className="date">Feb 17th</p>
 									<p className="event">
 										<span>Block Party</span> <span>-</span> 10:00 am-12:00 pm{" "}
 										<br /> located at 1924 Battle Row
